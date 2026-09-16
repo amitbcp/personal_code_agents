@@ -1,0 +1,94 @@
+{
+  "format_version": 1,
+  "imported_on": "2026-09-16",
+  "imports": [
+    {
+      "destination": "agents/reviewer.toml",
+      "repository": "https://github.com/VoltAgent/awesome-codex-subagents",
+      "revision": "70d930a14f58f06d00abdd854ebce82a52a7d857",
+      "upstream_path": "categories/04-quality-security/reviewer.toml",
+      "license_file": "licenses/VoltAgent--awesome-codex-subagents/LICENSE",
+      "upstream_url": "https://github.com/VoltAgent/awesome-codex-subagents/tree/70d930a14f58f06d00abdd854ebce82a52a7d857/categories/04-quality-security/reviewer.toml"
+    },
+    {
+      "destination": "agents/scientific-literature-researcher.toml",
+      "repository": "https://github.com/VoltAgent/awesome-codex-subagents",
+      "revision": "70d930a14f58f06d00abdd854ebce82a52a7d857",
+      "upstream_path": "categories/10-research-analysis/scientific-literature-researcher.toml",
+      "license_file": "licenses/VoltAgent--awesome-codex-subagents/LICENSE",
+      "upstream_url": "https://github.com/VoltAgent/awesome-codex-subagents/tree/70d930a14f58f06d00abdd854ebce82a52a7d857/categories/10-research-analysis/scientific-literature-researcher.toml"
+    },
+    {
+      "destination": "agents/eval-engineer.toml",
+      "repository": "https://github.com/VoltAgent/awesome-codex-subagents",
+      "revision": "70d930a14f58f06d00abdd854ebce82a52a7d857",
+      "upstream_path": "categories/13-llmops-evals-observability/eval-engineer.toml",
+      "license_file": "licenses/VoltAgent--awesome-codex-subagents/LICENSE",
+      "upstream_url": "https://github.com/VoltAgent/awesome-codex-subagents/tree/70d930a14f58f06d00abdd854ebce82a52a7d857/categories/13-llmops-evals-observability/eval-engineer.toml"
+    },
+    {
+      "destination": "agents/data-engineer.toml",
+      "repository": "https://github.com/VoltAgent/awesome-codex-subagents",
+      "revision": "70d930a14f58f06d00abdd854ebce82a52a7d857",
+      "upstream_path": "categories/05-data-ai/data-engineer.toml",
+      "license_file": "licenses/VoltAgent--awesome-codex-subagents/LICENSE",
+      "upstream_url": "https://github.com/VoltAgent/awesome-codex-subagents/tree/70d930a14f58f06d00abdd854ebce82a52a7d857/categories/05-data-ai/data-engineer.toml"
+    },
+    {
+      "destination": "agents/performance-engineer.toml",
+      "repository": "https://github.com/VoltAgent/awesome-codex-subagents",
+      "revision": "70d930a14f58f06d00abdd854ebce82a52a7d857",
+      "upstream_path": "categories/04-quality-security/performance-engineer.toml",
+      "license_file": "licenses/VoltAgent--awesome-codex-subagents/LICENSE",
+      "upstream_url": "https://github.com/VoltAgent/awesome-codex-subagents/tree/70d930a14f58f06d00abdd854ebce82a52a7d857/categories/04-quality-security/performance-engineer.toml"
+    },
+    {
+      "destination": "skills/hypothesis-generation",
+      "repository": "https://github.com/K-Dense-AI/scientific-agent-skills",
+      "revision": "330c8e764435a731eff571e3efdda70b363d0792",
+      "upstream_path": "skills/hypothesis-generation",
+      "license_file": "licenses/K-Dense-AI--scientific-agent-skills/LICENSE.md",
+      "upstream_url": "https://github.com/K-Dense-AI/scientific-agent-skills/tree/330c8e764435a731eff571e3efdda70b363d0792/skills/hypothesis-generation"
+    },
+    {
+      "destination": "skills/get-available-resources",
+      "repository": "https://github.com/K-Dense-AI/scientific-agent-skills",
+      "revision": "330c8e764435a731eff571e3efdda70b363d0792",
+      "upstream_path": "skills/get-available-resources",
+      "license_file": "licenses/K-Dense-AI--scientific-agent-skills/LICENSE.md",
+      "upstream_url": "https://github.com/K-Dense-AI/scientific-agent-skills/tree/330c8e764435a731eff571e3efdda70b363d0792/skills/get-available-resources"
+    },
+    {
+      "destination": "skills/ml-paper-writing",
+      "repository": "https://github.com/Orchestra-Research/AI-Research-SKILLs",
+      "revision": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
+      "upstream_path": "20-ml-paper-writing/ml-paper-writing",
+      "license_file": "licenses/Orchestra-Research--AI-Research-SKILLs/LICENSE",
+      "upstream_url": "https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/773a52944ba4747a18bd4ae9ade53fff041adcbc/20-ml-paper-writing/ml-paper-writing"
+    },
+    {
+      "destination": "skills/hf-mem",
+      "repository": "https://github.com/huggingface/skills",
+      "revision": "f3186efbbc322121eb5d0f31e8a1d669ee961159",
+      "upstream_path": "skills/hf-mem",
+      "license_file": "licenses/huggingface--skills/LICENSE",
+      "upstream_url": "https://github.com/huggingface/skills/tree/f3186efbbc322121eb5d0f31e8a1d669ee961159/skills/hf-mem"
+    },
+    {
+      "destination": "skills/train-sentence-transformers",
+      "repository": "https://github.com/huggingface/skills",
+      "revision": "f3186efbbc322121eb5d0f31e8a1d669ee961159",
+      "upstream_path": "skills/train-sentence-transformers",
+      "license_file": "licenses/huggingface--skills/LICENSE",
+      "upstream_url": "https://github.com/huggingface/skills/tree/f3186efbbc322121eb5d0f31e8a1d669ee961159/skills/train-sentence-transformers"
+    },
+    {
+      "destination": "skills/jupyter-notebook",
+      "repository": "https://github.com/openai/skills",
+      "revision": "49f948faa9258a0c61caceaf225e179651397431",
+      "upstream_path": "skills/.curated/jupyter-notebook",
+      "license_file": "licenses/openai--skills/LICENSE.txt",
+      "upstream_url": "https://github.com/openai/skills/tree/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/jupyter-notebook"
+    }
+  ]
+}
