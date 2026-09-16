@@ -3,6 +3,8 @@ name: hf-mem
 description: Hugging Face CLI to estimate the required memory to load Safetensors or GGUF model weights for inference from the Hugging Face Hub
 ---
 
+<!-- Modified 2026-09-16 for Personal Code Agents; see CHANGES.md and provenance.json. -->
+
 `hf_mem` estimates the required memory for inference, including model weights and an optional KV cache, for Safetensors and GGUF for models on the Hugging Face Hub using HTTP Range requests i.e., without downloading or loading any weights locally.
 
 ## When to use?
@@ -77,3 +79,9 @@ And, for LLMs or VLMs with GGUF weights:
 ```bash
 uvx hf-mem --model-id unsloth/Qwen3.5-397B-A17B-GGUF --gguf-file Q4_K_M --experimental --json-output
 ```
+
+## Interpreting results in this collection
+
+Estimates are planning inputs, not proof that a workload fits. Compare against the memory available to the actual process/allocation; Apple unified memory is shared with the CPU. Account separately for activations, runtime workspaces, batch/sequence length, fragmentation and other processes. Experimental KV-cache estimates have additional model/backend assumptions. Validate a representative small workload before allocating the full job.
+
+Use an existing project tool/environment when available. If installation is needed, record the tool version used; `uvx` can download a package. Pass credentials through the existing environment or credential store, never a command-line token printed in logs. Missing metadata means unknown, not zero memory. This skill does not launch cloud jobs or terminate running work.

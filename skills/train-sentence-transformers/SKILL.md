@@ -1,109 +1,47 @@
 ---
 name: train-sentence-transformers
-description: Train or fine-tune sentence-transformers models across `SentenceTransformer` (bi-encoder, dense or static embedding model for retrieval, similarity, clustering, classification, paraphrase mining, dedup, multimodal), `CrossEncoder` (reranker, pair scoring for two-stage retrieval / pair classification), `SparseEncoder` (SPLADE, sparse embedding model for learned-sparse retrieval), and `MultiVectorEncoder` (ColBERT / late-interaction, per-token embeddings scored with MaxSim). Covers loss selection, hard-negative mining, evaluators, distillation, LoRA, Matryoshka, and Hugging Face Hub publishing. Use for any sentence-transformers training task.
+description: Design or update Sentence Transformers training for dense retrieval, CrossEncoder reranking, learned sparse retrieval or multi-vector models, including loss/data alignment and leakage-aware evaluation. Use for training or evaluation planning and implementation.
+license: Apache-2.0
 ---
 
-# Train a sentence-transformers Model
+<!-- Modified 2026-09-16 for Personal Code Agents; see CHANGES.md and provenance.json. -->
 
-**This SKILL.md is a router, not a manual.** It tells you which references and example scripts to load for your task. The actual content (recommended losses, evaluators, training-script structure, model selection, training-arg knobs, troubleshooting) lives in `references/` and `scripts/`.
+# Train retrieval models
 
-**Do not synthesize a training script from this file alone.** Open the per-type production template (`scripts/train_<type>_example.py`) and copy it as your starting point. The templates contain load-bearing scaffolding (autocast helper, model-card class, logger silencing list, `force=True`, `seed`, TF32, version-compatible imports, named-evaluator metric handling) that prior agent runs have repeatedly missed when rolling their own from a synthesized snippet.
+Adapted from Hugging Face Skills; see repository provenance.json and CHANGES.md.
 
-## 1. Identify the model type
+## Start from the project
 
-| Tag | Class | What it does | When to pick |
-|---|---|---|---|
-| **[SentenceTransformer]** | `SentenceTransformer` (bi-encoder) | Maps each input to a fixed-dim dense vector | Retrieval, similarity, clustering, classification, paraphrase mining, dedup |
-| **[CrossEncoder]** | `CrossEncoder` (reranker) | Scores `(query, passage)` pairs jointly | Two-stage retrieval (rerank top-100 from bi-encoder), pair classification |
-| **[SparseEncoder]** | `SparseEncoder` (SPLADE) | Sparse vectors over the vocabulary | Learned-sparse retrieval, inverted-index backends (Elasticsearch / OpenSearch / Lucene) |
-| **[MultiVectorEncoder]** | `MultiVectorEncoder` (ColBERT) | One embedding per token, scored with MaxSim | Late-interaction retrieval, recall gains over bi-encoders at higher storage cost, multimodal (ColPali / ColQwen2) |
+Use its existing trainer, environment, dataset contracts and experiment ledger. Determine whether the requested model is a bi-encoder, CrossEncoder, sparse encoder or multi-vector encoder; do not replace the model family simply to fit an example. Check the installed Sentence Transformers/Transformers versions and their matching official documentation before choosing loss classes or argument names.
 
-Tiebreakers when the request is ambiguous: "embedding model" / "vector search" / "similarity" → **[SentenceTransformer]**. "rerank" / "ranker" / "two-stage" → **[CrossEncoder]**. "SPLADE" / "sparse" / "inverted index" → **[SparseEncoder]**. "ColBERT" / "late interaction" / "multi-vector" / "MaxSim" / "ColPali" / "ColQwen" → **[MultiVectorEncoder]**. If still unclear, ask.
+Run on the authorized execution host/allocation. Keep Python environments and caches appropriate to that host; shared source paths do not imply shared usable GPUs. Preserve user-selected models, hardware and concurrency unless evidence warrants a proposed change. Do not install drivers, build custom frameworks or switch to paid cloud compute as an automatic fallback.
 
-## 2. Required reading
+## Data and objective
 
-**Read these in full before writing any code. Do not triage by perceived relevance.**
+- Establish the unit of independence and split before mining or training. Related queries, source documents and near duplicates can cross splits even when row IDs differ.
+- Mine negatives from permitted training data; record the retriever, candidate depth, filtering and positive-label coverage. Do not mine from the held-out final test set.
+- Check real batch columns, order, tensor shapes, masks and labels against the installed loss API. Pointwise labels, pairwise margins and listwise relevance are different contracts.
+- Choose class weighting, score activation, sequence length and negative counts from the experiment; no universal setting is optimal.
+- For cached contrastive losses, sparse regularizers or multi-vector scoring, verify library compatibility and inspect a small forward/backward batch before scaling.
 
-### Per-type: always required
+Read [evaluation.md](references/evaluation.md) when designing or changing evaluation; [cross-encoder.md](references/cross-encoder.md) for reranker-specific checks.
 
-**[SentenceTransformer]**
-- `references/losses_sentence_transformer.md`: loss-to-data-shape mapping, `BatchSamplers.NO_DUPLICATES` requirement for MNRL-family, `Cached*` ↔ `gradient_checkpointing` incompatibility.
-- `references/evaluators_sentence_transformer.md`: evaluator-to-task mapping, `metric_for_best_model` key construction (named vs unnamed), per-evaluator `primary_metric` values.
-- `references/model_architectures.md`: encoder vs decoder vs static vs Router pipelines, pooling rules (mean / cls / lasttoken), auto-mean-pooling behavior for fresh-start MLM bases.
-- `scripts/train_sentence_transformer_example.py`: production template. Copy this as your starting point.
+## Run and compare
 
-**[CrossEncoder]**
-- `references/losses_cross_encoder.md`: pointwise / pairwise / listwise / distillation, `pos_weight` derivation, `activation_fn=Identity()` mandatory for non-BCE losses (silent eval-rank collapse otherwise).
-- `references/evaluators_cross_encoder.md`: `CrossEncoderRerankingEvaluator` recipe, named-evaluator key format `eval_{name}_{primary_metric}`.
-- `scripts/train_cross_encoder_example.py`: production template. Copy this as your starting point.
+For a planning-only request, provide the protocol and leave execution steps below as proposed work.
 
-**[SparseEncoder]**
-- `references/losses_sparse_encoder.md`: `SpladeLoss` wrapper requirement, FLOPS regularizer weights, smoke-test active-dim ramp behavior.
-- `references/evaluators_sparse_encoder.md`: `SparseNanoBEIREvaluator` (English-only) and the in-domain alternative, `eval_{name}_{primary_metric}` key format.
-- `scripts/train_sparse_encoder_example.py`: production template. Copy this as your starting point.
+1. Record the existing baseline on development data before making the change.
+2. Smoke-test a small training batch, evaluation batch, checkpoint save and reload using the project environment. Check finite loss, expected gradients, scoring behavior and evaluator metric names.
+3. Run the authorized experiment with explicit config, seed, split identity, package versions, hardware, batch size and concurrency. Use the project's tracker and output paths; do not require a new tracker or fixed log format.
+4. Select checkpoints and tune on development data. Keep the final test reserved for the agreed frozen comparison. Report failures and negative results alongside successful runs.
+5. Save checkpoints locally or to the project's authorized durable storage. Hub uploads, public repositories, external metrics syncing and paid jobs require authorization for that destination/action; local training does not imply publishing.
 
-**[MultiVectorEncoder]**
-- `references/losses_multi_vector_encoder.md`: MaxSim scoring, scale choice per scoring mode (`scale=1.0` for MaxSim, roughly the average query length for MeanMaxSim), MNRL / CachedMNRL / MarginMSE / DistillKLDiv, XTR-vs-ColBERT scoring, CachedMNRL ↔ `gradient_checkpointing` incompatibility.
-- `references/evaluators_multi_vector_encoder.md`: `MultiVectorNanoBEIREvaluator` (English-only) and the in-domain alternative, `eval_NanoBEIR_mean_maxsim_ndcg@10` key format, distillation-eval spearman variant.
-- `scripts/train_multi_vector_encoder_example.py`: production template. Copy this as your starting point.
+A small score increase alone is not a win. Compare paired query-level uncertainty, candidate recall, latency, memory and training cost. When data are too small to distinguish runs, report that uncertainty rather than emitting an unconditional WIN verdict.
 
-### Cross-cutting: always required (regardless of task)
+## References
 
-- `references/training_args.md`: `TrainingArguments` knobs, precision rules (load fp32 + autocast bf16/fp16, never `torch_dtype=bfloat16`), `warmup_steps` (float) vs deprecated `warmup_ratio`, `save_steps` must be a multiple of `eval_steps` for `load_best_model_at_end`, schedulers, HPO, tracker, resume, hub-push variants.
-- `references/dataset_formats.md`: column-matching rules (label name auto-detection, column-order-not-name), reshaping recipes, hard-negative mining options.
-- `references/base_model_selection.md`: discovery commands, per-type model namespaces, ModernBERT-family `max_seq_length=8192` trap, `datasets >= 4` script-loader rejection, non-English starting-point shortcuts.
-- `references/troubleshooting.md`: symptom-indexed failure recipes. Skim the section headings on every run, even a healthy one. The "Metrics don't improve" and "Hub push fails" entries cover bugs that bite frequently and are cheaper to recognize before they fire than to debug after.
+- [Sentence Transformers training overview](https://www.sbert.net/docs/sentence_transformer/training_overview.html)
+- [CrossEncoder training overview](https://www.sbert.net/docs/cross_encoder/training_overview.html)
+- [Sentence Transformers documentation](https://www.sbert.net/)
 
-### Cross-cutting: load when applicable
-
-- `references/hardware_guide.md`: VRAM sizing, multi-GPU, FSDP / DeepSpeed, HF Jobs flavors. Required for >24GB models, multi-GPU, or HF Jobs runs.
-- `references/hf_jobs_execution.md`: required when running on HF Jobs.
-- `references/prompts_and_instructions.md`: required when using prompt-tuned bases (E5, BGE, GTE, Qwen3-Embedding, Instructor, Nomic, etc.) or adding `query: ` / `passage: ` style prefixes.
-
-### Variant scripts (open when the task matches)
-- **[SentenceTransformer]** `scripts/train_sentence_transformer_<matryoshka|multi_dataset|with_lora|distillation|make_multilingual|static_embedding>_example.py`.
-- **[CrossEncoder]** `scripts/train_cross_encoder_<distillation|listwise>_example.py`.
-- **[SparseEncoder]** `scripts/train_sparse_encoder_distillation_example.py`.
-- Hard-negative mining CLI: `scripts/mine_hard_negatives.py`.
-
-## 3. Defaults
-
-Override only if the user specifies otherwise:
-- **Local execution.** Pitch HF Jobs only if local hardware can't fit the job.
-- **Single run.** After it completes, propose experimentation if the user would benefit (weak/marginal verdict, "see how high you can push it" framing, etc.). Iteration rules in `references/training_args.md` (Experimentation section).
-- **Public Hub push at end-of-run, wrapped in try-except.** On HF Jobs (ephemeral env) ALSO enable in-trainer push (`push_to_hub=True` + `hub_strategy="every_save"`). Details in `references/hf_jobs_execution.md`.
-
-## 4. Constraints the produced script must satisfy
-
-These are non-negotiable contracts. Implementation lives in the production templates and references. Do not reinvent.
-
-- Capture the pre-training evaluator score as `baseline_eval` **before** `trainer.train()`.
-- Emit a single end-of-run line: `VERDICT: WIN|MARGINAL|REGRESSION | score=... | baseline=... | delta=...`. A monitor scrapes for this.
-- Silence `httpx`, `httpcore`, `huggingface_hub`, `urllib3`, `filelock`, `fsspec` to WARNING (otherwise HF download URLs flood the agent's context).
-- Tee logs to `logs/{RUN_NAME}.log`.
-- End with `model.push_to_hub(...)` wrapped in `try/except`.
-- Smoke-test before any long run (`max_steps=1` + tiny dataset slice). The production templates show one common pattern (`SMOKE_TEST` env var).
-- **[CrossEncoder]** Include `EarlyStoppingCallback(patience>=3)`. CE rerankers often peak mid-training and regress.
-- **[SparseEncoder]** Log `query_active_dims` / `corpus_active_dims` on the verdict line. High nDCG with collapsed sparsity is not a win. The keys come back name-prefixed (e.g. `..._query_active_dims`). Use suffix matching to pluck them. See the SPARSE production template for the exact pattern.
-- **[MultiVectorEncoder]** Match `scale` to the scoring mode on any MNRL-family loss: near `1.0` for unnormalized MaxSim (do not copy `scale=20.0` from bi-encoder MNRL), roughly the average query length with length-normalized MeanMaxSim, since each score is divided by its query's token count. `XTRScores` is a train-only `similarity_fct`: the evaluators reject it, so evaluation always scores with MaxSim, including for XTR-trained models.
-
-## 5. Workflow
-
-1. Identify the model type (§1). Ask if ambiguous.
-2. Load the §2 required-reading files for that type.
-3. Open `scripts/train_<type>_example.py` and copy it as your starting point.
-4. Replace `MODEL_NAME`, `DATASET_NAME`, `RUN_NAME`, the loss, and the evaluator with the user's task. Cross-check loss/data-shape match against `references/losses_<type>.md`. Cross-check the `metric_for_best_model` key against `references/evaluators_<type>.md` (named evaluators format the key as `eval_{name}_{primary_metric}`).
-5. Smoke-test (`max_steps=1`).
-6. Run.
-7. After the run, append to `logs/experiments.md` and propose iteration if the verdict is weak/marginal.
-
-## Prerequisites
-
-```bash
-pip install "sentence-transformers[train]>=5.0"        # add [train,image] / [audio] / [video] for [SentenceTransformer] multimodal
-                                                       # [MultiVectorEncoder] requires >=6.0
-pip install trackio                                    # optional tracker (or wandb / tensorboard / mlflow)
-hf auth login                                          # or set HF_TOKEN with write scope (for Hub push)
-```
-
-GPU strongly recommended. CPU works only for demos and `[SentenceTransformer]` `StaticEmbedding`.
+Use current documentation for the installed release. Examples from the upstream import are retained in Git history; they are not executable defaults in this collection.

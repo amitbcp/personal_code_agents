@@ -1,0 +1,45 @@
+path,review_status,disposition,rationale
+skills/.curated/aspnet-core/SKILL.md,catalog screened; full-file mechanical scan,defer,Not needed in initial research/IR/multimodal library; revisit for a concrete task.
+skills/.curated/chatgpt-apps/SKILL.md,catalog screened; full-file mechanical scan,defer,Not needed in initial research/IR/multimodal library; revisit for a concrete task.
+skills/.curated/cli-creator/SKILL.md,catalog screened; full-file mechanical scan,defer,Not needed in initial research/IR/multimodal library; revisit for a concrete task.
+skills/.curated/cloudflare-deploy/SKILL.md,catalog screened; full-file mechanical scan,defer,Hosted deployment workflow is outside initial local/SSH research scope.
+skills/.curated/define-goal/SKILL.md,catalog screened; full-file mechanical scan,defer,Not needed in initial research/IR/multimodal library; revisit for a concrete task.
+skills/.curated/figma/SKILL.md,catalog screened; full-file mechanical scan,defer,Connector-specific workflow without a current project need.
+skills/.curated/figma-code-connect-components/SKILL.md,catalog screened; full-file mechanical scan,defer,Connector-specific workflow without a current project need.
+skills/.curated/figma-create-design-system-rules/SKILL.md,catalog screened; full-file mechanical scan,defer,Connector-specific workflow without a current project need.
+skills/.curated/figma-create-new-file/SKILL.md,catalog screened; full-file mechanical scan,defer,Connector-specific workflow without a current project need.
+skills/.curated/figma-generate-design/SKILL.md,catalog screened; full-file mechanical scan,defer,Connector-specific workflow without a current project need.
+skills/.curated/figma-generate-library/SKILL.md,catalog screened; full-file mechanical scan,defer,Connector-specific workflow without a current project need.
+skills/.curated/figma-implement-design/SKILL.md,catalog screened; full-file mechanical scan,defer,Connector-specific workflow without a current project need.
+skills/.curated/figma-use/SKILL.md,catalog screened; full-file mechanical scan,defer,Connector-specific workflow without a current project need.
+skills/.curated/gh-address-comments/SKILL.md,full entrypoint read,defer,Not needed in initial research/IR/multimodal library; revisit for a concrete task.
+skills/.curated/gh-fix-ci/SKILL.md,full entrypoint read,defer,Defer: useful helper but forced second approval conflicts with already-authorized fixes; current GitHub CLI also unauthenticated.
+skills/.curated/hatch-pet/SKILL.md,catalog screened; full-file mechanical scan,defer,Not needed in initial research/IR/multimodal library; revisit for a concrete task.
+skills/.curated/jupyter-notebook/SKILL.md,full entrypoint read,select,"Select: portable notebook scaffold; fix output relative to working project, not skill repository."
+skills/.curated/linear/SKILL.md,catalog screened; full-file mechanical scan,defer,Not needed in initial research/IR/multimodal library; revisit for a concrete task.
+skills/.curated/migrate-to-codex/SKILL.md,catalog screened; full-file mechanical scan,defer,Not needed in initial research/IR/multimodal library; revisit for a concrete task.
+skills/.curated/netlify-deploy/SKILL.md,catalog screened; full-file mechanical scan,defer,Hosted deployment workflow is outside initial local/SSH research scope.
+skills/.curated/notion-knowledge-capture/SKILL.md,catalog screened; full-file mechanical scan,defer,Connector-specific workflow without a current project need.
+skills/.curated/notion-meeting-intelligence/SKILL.md,catalog screened; full-file mechanical scan,defer,Connector-specific workflow without a current project need.
+skills/.curated/notion-research-documentation/SKILL.md,catalog screened; full-file mechanical scan,defer,Connector-specific workflow without a current project need.
+skills/.curated/notion-spec-to-implementation/SKILL.md,catalog screened; full-file mechanical scan,defer,Connector-specific workflow without a current project need.
+skills/.curated/openai-docs/SKILL.md,catalog screened; full-file mechanical scan,defer,Existing supplied tools/skills cover this; avoid duplicate discovery and maintenance.
+skills/.curated/pdf/SKILL.md,catalog screened; full-file mechanical scan,defer,Existing supplied tools/skills cover this; avoid duplicate discovery and maintenance.
+skills/.curated/playwright/SKILL.md,catalog screened; full-file mechanical scan,defer,Not needed in initial research/IR/multimodal library; revisit for a concrete task.
+skills/.curated/playwright-interactive/SKILL.md,catalog screened; full-file mechanical scan,defer,Existing supplied tools/skills cover this; avoid duplicate discovery and maintenance.
+skills/.curated/render-deploy/SKILL.md,catalog screened; full-file mechanical scan,defer,Hosted deployment workflow is outside initial local/SSH research scope.
+skills/.curated/screenshot/SKILL.md,catalog screened; full-file mechanical scan,defer,Existing supplied tools/skills cover this; avoid duplicate discovery and maintenance.
+skills/.curated/security-best-practices/SKILL.md,catalog screened; full-file mechanical scan,defer,Not needed in initial research/IR/multimodal library; revisit for a concrete task.
+skills/.curated/security-ownership-map/SKILL.md,catalog screened; full-file mechanical scan,defer,Not needed in initial research/IR/multimodal library; revisit for a concrete task.
+skills/.curated/security-threat-model/SKILL.md,catalog screened; full-file mechanical scan,defer,Not needed in initial research/IR/multimodal library; revisit for a concrete task.
+skills/.curated/sentry/SKILL.md,catalog screened; full-file mechanical scan,defer,Not needed in initial research/IR/multimodal library; revisit for a concrete task.
+skills/.curated/speech/SKILL.md,catalog screened; full-file mechanical scan,defer,Not needed in initial research/IR/multimodal library; revisit for a concrete task.
+skills/.curated/transcribe/SKILL.md,catalog screened; full-file mechanical scan,defer,Not needed in initial research/IR/multimodal library; revisit for a concrete task.
+skills/.curated/vercel-deploy/SKILL.md,catalog screened; full-file mechanical scan,defer,Hosted deployment workflow is outside initial local/SSH research scope.
+skills/.curated/winui-app/SKILL.md,catalog screened; full-file mechanical scan,defer,Not needed in initial research/IR/multimodal library; revisit for a concrete task.
+skills/.curated/yeet/SKILL.md,catalog screened; full-file mechanical scan,defer,Not needed in initial research/IR/multimodal library; revisit for a concrete task.
+skills/.system/imagegen/SKILL.md,catalog screened; full-file mechanical scan,defer,Existing supplied tools/skills cover this; avoid duplicate discovery and maintenance.
+skills/.system/openai-docs/SKILL.md,catalog screened; full-file mechanical scan,defer,Existing supplied tools/skills cover this; avoid duplicate discovery and maintenance.
+skills/.system/plugin-creator/SKILL.md,catalog screened; full-file mechanical scan,defer,Existing supplied tools/skills cover this; avoid duplicate discovery and maintenance.
+skills/.system/skill-creator/SKILL.md,catalog screened; full-file mechanical scan,defer,Existing supplied tools/skills cover this; avoid duplicate discovery and maintenance.
+skills/.system/skill-installer/SKILL.md,catalog screened; full-file mechanical scan,defer,Existing supplied tools/skills cover this; avoid duplicate discovery and maintenance.

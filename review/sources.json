@@ -1,0 +1,38 @@
+[
+  {
+    "repository": "K-Dense-AI--scientific-agent-skills",
+    "url": "https://github.com/K-Dense-AI/scientific-agent-skills.git",
+    "revision": "330c8e764435a731eff571e3efdda70b363d0792",
+    "tracked_files": 2484
+  },
+  {
+    "repository": "Orchestra-Research--AI-Research-SKILLs",
+    "url": "https://github.com/Orchestra-Research/AI-Research-SKILLs.git",
+    "revision": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
+    "tracked_files": 529
+  },
+  {
+    "repository": "VoltAgent--awesome-codex-subagents",
+    "url": "https://github.com/VoltAgent/awesome-codex-subagents.git",
+    "revision": "70d930a14f58f06d00abdd854ebce82a52a7d857",
+    "tracked_files": 191
+  },
+  {
+    "repository": "huggingface--skills",
+    "url": "https://github.com/huggingface/skills.git",
+    "revision": "f3186efbbc322121eb5d0f31e8a1d669ee961159",
+    "tracked_files": 203
+  },
+  {
+    "repository": "msitarzewski--agency-agents",
+    "url": "https://github.com/msitarzewski/agency-agents.git",
+    "revision": "ad9264e309bd5e5422c04784372d7841b1e5d604",
+    "tracked_files": 362
+  },
+  {
+    "repository": "openai--skills",
+    "url": "https://github.com/openai/skills.git",
+    "revision": "49f948faa9258a0c61caceaf225e179651397431",
+    "tracked_files": 783
+  }
+]

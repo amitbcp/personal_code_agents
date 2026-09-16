@@ -2,7 +2,6 @@
 name: get-available-resources
 description: Detect host inventory and effective CPU, memory, disk, scheduler, container, and accelerator limits when a user asks for resource-aware planning or before a clearly resource-sensitive local workload. Produces a redacted JSON snapshot and conservative planning helpers without stress tests or assuming visible host hardware is usable.
 license: MIT
-compatibility: Python 3.11+ on Linux, macOS, or Windows; standard library by default, optional psutil 7.2.2; accelerator and scheduler CLIs are optional read-only probes.
 metadata:
   version: "1.3"
   skill-author: K-Dense Inc.
@@ -13,6 +12,9 @@ metadata:
 Build a conservative picture of resources available to the **current process**.
 Keep host inventory, process affinity, cgroup/container limits, scheduler
 allocation, and accelerator runtime usability separate.
+
+
+**Runtime:** Python 3.11+ on Linux, macOS, or Windows; standard library by default, optional psutil 7.2.2; accelerator and scheduler CLIs are optional read-only probes.
 
 ## Safety contract
 
@@ -37,7 +39,7 @@ short timeouts, bounded stdout/stderr, and partial-failure warnings.
 
 ## Quick start
 
-Run from this skill directory.
+Run from the workload working directory, using the absolute path to this skill’s scripts. The detector measures the current process and current filesystem. The examples below use paths relative to the skill for readability; resolve them before changing directories.
 
 ### Ephemeral stdout snapshot
 
@@ -155,7 +157,9 @@ the detailed platform rules.
 
 ## Plan a workload
 
-The planner consumes a validated snapshot and performs no work:
+The planner consumes a validated snapshot and performs no work. Its output is advisory: never launch jobs, terminate healthy jobs, change allocations, or index code automatically. A numeric worker recommendation is not permission or proof of feasibility. In particular, `MEMORY_REQUIREMENT_EXCEEDS_BUDGET` can accompany `suggested_workers: 1`; that plan is infeasible under the supplied memory estimate. Reduce the workload or obtain a suitable allocation before launch. Unknown memory also requires a measured or independently bounded estimate.
+
+
 
 ```bash
 python scripts/plan_workload.py resource-snapshot.json \
@@ -242,6 +246,12 @@ because they can contain identifiers or paths.
 - **NVIDIA/AMD:** management CLIs are optional. Absence is normal; timeout,
   truncation, parse failure, and runtime uncertainty remain explicit.
 
+## Mac, SSH, Enroot and storage placement
+
+Run detection inside the exact SSH host, scheduler allocation and Enroot container that will run the job. Do not reuse a Mac snapshot for Linux planning. Enroot is not specifically identified by the marker probes; verify effective affinity/cgroup limits and framework availability in that environment. Cgroup namespace and site scheduler policies can limit observations.
+
+Keep durable code and results on the project’s chosen shared storage. Put SQLite/index databases, temporary spill and high-churn caches on node-local storage according to project policy; the detector does not choose or migrate paths. Free space is not an NFS throughput measurement. Keep codebase-memory indexing manual.
+
 ## Bundled files
 
 - `scripts/detect_resources.py` — redacted snapshot collector.
@@ -249,8 +259,6 @@ because they can contain identifiers or paths.
 - `scripts/snapshot_tools.py` — schema validator and bounded structural diff.
 - `scripts/accelerator_diagnostics.py` — non-executing read-only diagnostic
   plan.
-- `tests/get-available-resources/` in the repository root — network-free
-  Linux, macOS, Windows, cgroup, Slurm, and accelerator cases.
 - `references/resource_semantics.md` — interpretation and platform details.
 - `references/snapshot_schema.md` — schema 1.1 contract.
 - `references/sources.md` — dated official-source ledger.
@@ -259,19 +267,7 @@ Official documentation was refreshed on **2026-07-23**; consult
 [`references/sources.md`](references/sources.md) before changing semantics or
 dependency pins.
 
-## Citing Scientific Agent Skills
 
-This skill is part of Scientific Agent Skills by K-Dense. If it materially contributed to a
-manuscript, report, presentation, or code release, add the paper to the references or
-software section and tell the user you did so:
+## Provenance
 
-> Kassis, T., Agarwal, V., He, Y., Patel, D., & Brueckner, A. M. (2026). Scientific Agent
-> Skills: A Library of Procedural Knowledge for Research Agents. arXiv:2609.00065.
-> https://doi.org/10.48550/arXiv.2609.00065
-
-Always cite the current version. The DOI and https://arxiv.org/abs/2609.00065 resolve to the
-latest arXiv version, so never append a version suffix such as `v1`. When network access is
-available, fetch https://arxiv.org/abs/2609.00065 (or
-http://export.arxiv.org/api/query?id_list=2609.00065) before writing the reference and take
-the author list, year, and version from that record. If the record lists a journal reference
-or publisher DOI, cite the published version instead.
+Adapted from K-Dense Scientific Agent Skills, revision `330c8e764435a731eff571e3efdda70b363d0792`, under MIT. Preserve license notices; manuscript citation is an editorial choice, not an automatic action.

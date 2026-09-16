@@ -1,0 +1,27 @@
+path,review_status,disposition,rationale
+hf-mcp/skills/hf-mcp/SKILL.md,catalog screened; full-file mechanical scan,defer,Not needed in initial research/IR/multimodal library; revisit for a concrete task.
+skills/hf-cli/SKILL.md,catalog screened; full-file mechanical scan,defer,Not needed in initial research/IR/multimodal library; revisit for a concrete task.
+skills/hf-cloud-aws-context-discovery/SKILL.md,catalog screened; full-file mechanical scan,defer,Hosted deployment workflow is outside initial local/SSH research scope.
+skills/hf-cloud-python-env-setup/SKILL.md,catalog screened; full-file mechanical scan,defer,Hosted deployment workflow is outside initial local/SSH research scope.
+skills/hf-cloud-sagemaker-deployment-planner/SKILL.md,catalog screened; full-file mechanical scan,defer,Hosted deployment workflow is outside initial local/SSH research scope.
+skills/hf-cloud-sagemaker-iam-preflight/SKILL.md,catalog screened; full-file mechanical scan,defer,Hosted deployment workflow is outside initial local/SSH research scope.
+skills/hf-cloud-sagemaker-production-defaults/SKILL.md,catalog screened; full-file mechanical scan,defer,Hosted deployment workflow is outside initial local/SSH research scope.
+skills/hf-cloud-serving-image-selection/SKILL.md,catalog screened; full-file mechanical scan,defer,Hosted deployment workflow is outside initial local/SSH research scope.
+skills/hf-mem/SKILL.md,full entrypoint read,select,Select: estimate model memory without downloading weights; adapt estimates to available memory and runtime overhead.
+skills/huggingface-best/SKILL.md,full entrypoint read,defer,Exclude: overbroad trigger and weights-only memory heuristic; blanket descending score ranking inappropriate for lower-is-better metrics.
+skills/huggingface-community-evals/SKILL.md,full entrypoint read,defer,Defer: provider execution called local; unknown jobs skill and user-specific path; no IR-specific evaluator.
+skills/huggingface-datasets/SKILL.md,full entrypoint read,defer,Defer: useful viewer API but unnecessary trace-upload surface and overlap with existing dataset tooling.
+skills/huggingface-gradio/SKILL.md,catalog screened; full-file mechanical scan,defer,Not needed in initial research/IR/multimodal library; revisit for a concrete task.
+skills/huggingface-llm-trainer/SKILL.md,catalog screened; full-file mechanical scan,defer,Not needed in initial research/IR/multimodal library; revisit for a concrete task.
+skills/huggingface-local-models/SKILL.md,full entrypoint read,defer,Not needed in initial research/IR/multimodal library; revisit for a concrete task.
+skills/huggingface-lora-space-builder/SKILL.md,catalog screened; full-file mechanical scan,defer,Not needed in initial research/IR/multimodal library; revisit for a concrete task.
+skills/huggingface-paper-publisher/SKILL.md,catalog screened; full-file mechanical scan,defer,Not needed in initial research/IR/multimodal library; revisit for a concrete task.
+skills/huggingface-papers/SKILL.md,full entrypoint read,defer,Not needed in initial research/IR/multimodal library; revisit for a concrete task.
+skills/huggingface-spaces/SKILL.md,catalog screened; full-file mechanical scan,defer,Not needed in initial research/IR/multimodal library; revisit for a concrete task.
+skills/huggingface-tool-builder/SKILL.md,full entrypoint read,defer,Not needed in initial research/IR/multimodal library; revisit for a concrete task.
+skills/huggingface-trackio/SKILL.md,full entrypoint read,defer,Defer: adopt only when project uses Trackio; remote sync and automatic stop/iteration need adaptation.
+skills/huggingface-vision-trainer/SKILL.md,catalog screened; full-file mechanical scan,defer,Not needed in initial research/IR/multimodal library; revisit for a concrete task.
+skills/huggingface-zerogpu/SKILL.md,catalog screened; full-file mechanical scan,defer,Not needed in initial research/IR/multimodal library; revisit for a concrete task.
+skills/train-sentence-transformers/SKILL.md,full entrypoint read,select,Select: strong direct reranker fit; remove default public publishing and overbroad fixed recipes; preserve task-specific guidance.
+skills/transformers-js/SKILL.md,catalog screened; full-file mechanical scan,defer,Not needed in initial research/IR/multimodal library; revisit for a concrete task.
+skills/trl-training/SKILL.md,catalog screened; full-file mechanical scan,defer,Not needed in initial research/IR/multimodal library; revisit for a concrete task.

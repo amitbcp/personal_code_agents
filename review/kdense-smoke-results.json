@@ -1,0 +1,65 @@
+{
+  "checks": [
+    {
+      "script": "validate_hypothesis_schema.py",
+      "expected_exit": 0,
+      "actual_exit": 0
+    },
+    {
+      "script": "check_operationalization.py",
+      "expected_exit": 0,
+      "actual_exit": 0
+    },
+    {
+      "script": "validate_prediction_matrix.py",
+      "expected_exit": 0,
+      "actual_exit": 0
+    },
+    {
+      "script": "audit_evidence_ledger.py",
+      "expected_exit": 0,
+      "actual_exit": 0
+    },
+    {
+      "script": "check_falsification_controls.py",
+      "expected_exit": 0,
+      "actual_exit": 0
+    },
+    {
+      "script": "validate_hypothesis_schema.py",
+      "expected_exit": 2,
+      "actual_exit": 2
+    },
+    {
+      "script": "lint_causal_claims.py",
+      "expected_exit": 1,
+      "actual_exit": 1
+    },
+    {
+      "script": "detect_resources.py",
+      "expected_exit": 0,
+      "actual_exit": 0
+    },
+    {
+      "script": "snapshot_tools.py",
+      "expected_exit": 0,
+      "actual_exit": 0
+    },
+    {
+      "script": "accelerator_diagnostics.py",
+      "expected_exit": 0,
+      "actual_exit": 0
+    },
+    {
+      "script": "plan_workload.py",
+      "expected_exit": 0,
+      "actual_exit": 0
+    },
+    {
+      "script": "snapshot_tools.py",
+      "expected_exit": 1,
+      "actual_exit": 1
+    }
+  ],
+  "count": 12
+}
