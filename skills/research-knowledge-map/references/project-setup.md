@@ -10,7 +10,39 @@ A shared, reviewed instruction directory can serve multiple projects and hosts. 
 
 ## Choose the project layout
 
-Reuse an established wiki path; otherwise `docs/wiki/` is a reasonable bundle root. Initially create only the index, log and pages supported by the chosen source set. Concepts, decisions, experiments and questions can become subdirectories as the content grows. Keep personal notes distinguishable from generated prose and define whether they belong in Git. Preserve the project's existing backup and access rules.
+- Reuse an established wiki path; otherwise use `docs/wiki/` as the bundle root.
+- Use the following default organization. These folder names are our workflow convention, not mandatory OKF categories. Create only directories and pages supported by the selected sources; do not create empty placeholders.
+
+```text
+docs/
+├── handoffs/
+│   ├── <existing-handoff>.md          # Preserve existing documents
+│   └── YYYY-MM-DD-<task>-migration.md # New, unique migration handoff
+└── wiki/
+    ├── index.md                      # Wiki entry point
+    ├── log.md                        # Wiki change history
+    ├── overview.md                   # Purpose, scope and orientation
+    ├── architecture/
+    ├── decisions/
+    ├── operations/
+    ├── research/
+    ├── experiments/
+    └── questions/
+```
+
+- Begin with the bundle index, log and supported knowledge pages. Add directory indexes as navigation grows; extend the layout for project-specific needs.
+- Follow [OKF conventions](okf-conventions.md) for metadata and reserved files. `overview.md` and all other non-reserved Markdown pages inside the bundle need a nonempty `type`; folder names do not replace page metadata.
+- Keep reusable knowledge in the wiki and time-sensitive migration state in a new handoff. Link between them and to authoritative source documents.
+- Keep personal notes distinguishable from generated prose and define whether they belong in Git. Preserve the project's existing backup and access rules.
+
+## Preserve documents and coordinate migration handoffs
+
+- Do not overwrite, rename, move or delete existing handoffs or source documentation as part of wiki initialization or migration preparation. Link to sources in place.
+- Create each requested migration handoff under `docs/handoffs/` with a unique date-and-task filename; choose another name if it exists. Begin with a START HERE brief linking the wiki entry point, essential reading, current work and next steps.
+- Update existing wiki pages carefully, preserving personal annotations, historical decisions, unfamiliar metadata and other tasks' edits. Do not replace an established wiki with a second generated structure.
+- Keep sensitive operational details in an established approved private documentation location and link to it appropriately. If none is known, omit sensitive details and report the gap; never include secrets.
+- For a fresh-session handoff, use available task context and relevant project files. Do not bulk-import conversation archives unless explicitly requested. Disclose compacted or missing context and record reviewed versus unread source areas.
+- When tasks share a project on NFS, use one writer for overlapping pages and indexes. If overlapping edits are underway, save a unique task contribution under `docs/handoffs/wiki-contributions/` outside the OKF bundle, then report the exact consolidation needed. Do not overwrite shared pages or assume Git provides a cross-host lock.
 
 Add the maintenance rule to the existing project-root `AGENTS.md` (or the effective project instruction file), merging with local guidance. Do not overwrite the file or copy global user guidance into it. A nested wiki-only instruction is insufficient for work performed elsewhere in the project. See [instruction discovery](https://learn.chatgpt.com/docs/agent-configuration/agents-md).
 

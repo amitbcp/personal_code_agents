@@ -7,7 +7,7 @@ description: Create, query, and maintain an OKF project wiki or research knowled
 
 - Maintain source-linked project knowledge using Google's Open Knowledge Format (OKF) v0.2 and Karpathy's LLM-wiki workflow.
 - Keep the existing skill name for compatibility.
-- Read [OKF conventions](references/okf-conventions.md) when creating or updating pages; read [project setup](references/project-setup.md) when enabling a wiki or changing its maintenance policy.
+- Read [OKF conventions](references/okf-conventions.md) when creating or updating pages; read [project setup](references/project-setup.md) when initializing a wiki, preparing a migration handoff or changing its maintenance policy. Follow its default layout and document-preservation rules, adapting to established project structure.
 
 ## Scope and sources
 
