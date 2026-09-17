@@ -13,7 +13,7 @@ A small, traceable Codex library for retrieval, model evaluation, multimodal res
 | performance-engineer | Measured bottlenecks, resource/concurrency diagnosis and comparisons |
 | literature-survey | Bounded search, screening records and cross-paper evidence synthesis |
 | paper-reading | Paper mechanisms, derivations and personal comprehension exercises |
-| research-knowledge-map | Deliberately maintained, source-linked research notes |
+| research-knowledge-map | OKF project wiki, research knowledge and scoped task-end upkeep |
 | hypothesis-generation | Rival explanations and discriminating experiments |
 | get-available-resources | Read-only process/allocation resource inventory and advisory planning |
 | train-sentence-transformers | Retrieval/reranker training contracts and leakage-aware evaluation |
@@ -24,6 +24,12 @@ A small, traceable Codex library for retrieval, model evaluation, multimodal res
 Agents define responsibilities and execution boundaries. Skills supply procedures. Keep existing project guidance, CBM exploration agents and ordinary Codex workers; there is no requirement to invoke every component for every task.
 
 See the [research workflow guide](review/research-workflow.md) for literature → experiments → paper preparation and the expanded company/author review. The three added research-note skills are original procedures; the earlier imported baseline remains unchanged in history.
+
+## OKF project wiki setup
+
+The existing `research-knowledge-map` skill now supports Google OKF v0.2 project wikis. Follow its [setup guide](skills/research-knowledge-map/references/project-setup.md) to install the shared skill in the appropriate profiles, merge the project maintenance rule, and initialize a bounded source set. [Format conventions](skills/research-knowledge-map/references/okf-conventions.md) distinguish the OKF standard from our research conventions.
+
+Routine upkeep happens during active tasks under project instructions; bulk ingestion stays explicitly scoped. No hook, background writer, database or Google service is required. This repository update does not install the skill or create wikis on the Mac or servers.
 
 ## Provenance and changes
 

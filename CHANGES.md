@@ -22,3 +22,7 @@ Whole upstream catalogs, installers, invented agent histories, cloud orchestrati
 Add three original project procedures: literature-survey, paper-reading, and research-knowledge-map. These are not unchanged upstream imports; their conceptual sources are identified in the research workflow guide. No new runtime, watcher, index database or cloud dependency is introduced.
 
 Add an ML ablation design reference to hypothesis-generation, covering matched budgets, component interactions, retraining versus inference removal, independent final evaluation, preserved run records and shared-server execution boundaries. Clarify author-side writing versus assigned confidential peer review in ml-paper-writing. Keep the existing five agent roles.
+
+## OKF project wiki setup
+
+Expand research-knowledge-map in place for Google OKF v0.2, preserving its name and the five-agent/nine-skill collection. Add self-contained format and project setup references, including an original project-root maintenance rule. Routine task-end updates use standing project authorization; bulk imports remain explicitly scoped. Preserve raw sources, personal annotations and historical verification context, and coordinate shared-file writers. No runtime, hooks or active-profile changes.

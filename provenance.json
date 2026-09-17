@@ -105,7 +105,9 @@
     {
       "destination": "skills/research-knowledge-map",
       "authorship": "Original project procedure; no upstream text or executable copied",
-      "design_sources": "review/research-workflow.md"
+      "design_sources": "skills/research-knowledge-map/references/okf-conventions.md; review/research-workflow.md",
+      "format_reference": "https://github.com/GoogleCloudPlatform/open-knowledge-format/blob/main/SPEC.md",
+      "format_version": "0.2"
     },
     {
       "destination": "skills/hypothesis-generation/references/ml-ablation-design.md",
