@@ -52,6 +52,8 @@ Exit codes: 0 means the requested structural check completed validly, 1 means va
 
 ## Deeper references
 
+For ML ablation campaigns, matched budgets, interaction effects and experiment retention, read [ML ablation design](references/ml-ablation-design.md).
+
 Load only when useful: [causal claims](references/causal_inference_and_claims.md), [design patterns](references/experimental_design_patterns.md), [literature boundaries](references/literature_search_strategies.md), and [preregistration](references/preregistration_and_open_science.md). Domain examples and oversight advice in references are conditional on the actual study; they do not override this entrypoint, project guidance, or existing user authorization. Source-ledger dates are provenance, not a guarantee of current policy.
 
 ## Provenance

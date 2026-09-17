@@ -43,6 +43,8 @@ For a rebuttal, address each substantive concern with evidence and an exact manu
 
 ## Venue and final checks
 
+This skill supports author-side writing and critique. For an assigned confidential peer review, first check the venue's current AI and confidentiality policy; permission to write your own paper does not establish permission to process another author's confidential submission. For conference-oriented evidence preparation, use [the research workflow guide](https://github.com/amitbcp/personal_code_agents/blob/main/review/research-workflow.md).
+
 For venue-specific preparation, read the current official instructions for the exact venue, year, track, and submission stage. Record the source and access date in the project notes. These instructions determine page limits, templates, anonymity, supplements, checklists, disclosure, and bibliography format. Do not infer current rules from older papers or this skill.
 
 Use the project's existing template when appropriate. If replacement is necessary, obtain the official current template for the requested venue and preserve its notices; do not change margins/fonts to bypass requirements. Use the existing build/render workflow and inspect the resulting figures, equations, references, and page breaks.

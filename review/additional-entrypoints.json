@@ -1,0 +1,205 @@
+[
+  {
+    "repository": "anthropics--skills",
+    "path": "skills/doc-coauthoring/SKILL.md",
+    "coverage": "full semantic entrypoint read",
+    "decision": "reference-only",
+    "finding": "Independent reader testing useful; 5-10 questions per section and repeated gates conflict with lean authorized drafting. No need full import."
+  },
+  {
+    "repository": "anthropics--skills",
+    "path": "skills/discernment-nudge/SKILL.md",
+    "coverage": "full semantic entrypoint read",
+    "decision": "exclude",
+    "finding": "Useful inline uncertainty principle; broad closing-question nudge duplicates review and shifts verification work to user. Not research method."
+  },
+  {
+    "repository": "anthropics--skills",
+    "path": "skills/academy-guide/SKILL.md",
+    "coverage": "full semantic entrypoint read",
+    "decision": "exclude",
+    "finding": "Claude product course router; not AI paper learning. Strong-match catalog validation useful general principle."
+  },
+  {
+    "repository": "anthropics--skills",
+    "path": "skills/skill-creator/SKILL.md",
+    "coverage": "full semantic entrypoint read",
+    "decision": "reference-only",
+    "finding": "Useful with/without baseline, blind grader and variance. Description optimizer repeatedly evaluates and selects on heldout test, making it development data. No replacement of installed creator; avoid pushy triggers and blanket interview gates."
+  },
+  {
+    "repository": "google-deepmind--science-skills",
+    "path": "skills/literature_search_arxiv/SKILL.md",
+    "coverage": "full semantic entrypoint read",
+    "decision": "candidate",
+    "finding": "Bounded paginated metadata/fulltext workflow. Need inspect helper rate limits/error handling; compulsory uv/license-notification ledger overhead; directory isolation alone does not guarantee archive extraction security. Full three helpers read: search JSON print is inside entry loop (multiple concatenated JSON objects; no output for zero hits); downloader catches404 but returns success and overwrites output. Not import-ready."
+  },
+  {
+    "repository": "google-deepmind--science-skills",
+    "path": "skills/literature_search_openalex/SKILL.md",
+    "coverage": "full semantic entrypoint read",
+    "decision": "conditional",
+    "finding": "Identifier resolution and bounded outputs useful; implicit home.env/key requests and dated pricing need removal/reverification. API client not complete survey methodology."
+  },
+  {
+    "repository": "karpathy--autoresearch",
+    "path": "program.md",
+    "coverage": "full semantic entrypoint read",
+    "decision": "reference-only",
+    "finding": "Fixed evaluation, baseline and experiment log useful. Endless loop, 10min kill, permission disable advice in README, greedy score selection, reset-discard and untracked results conflict with shared GPU policy/reproducible research. Do not install/run."
+  },
+  {
+    "repository": "karpathy--llm-wiki",
+    "path": "llm-wiki.md",
+    "coverage": "full semantic entrypoint read",
+    "decision": "concept-reference",
+    "finding": "Source-linked persistent synthesis useful for personal papers. Idea note not tested MCP or automatic truth. Preserve raw/derived distinction, provenance, contradictions and manual writes; no full text vendoring absent explicit license."
+  },
+  {
+    "repository": "anthropics--skills",
+    "path": "skills/mcp-builder/SKILL.md",
+    "coverage": "full semantic entrypoint read",
+    "decision": "defer",
+    "finding": "Tool naming/pagination/evals useful for SKS; comprehensive coverage default and prescribed TS can overexpand existing FastMCP task. Conditional future adaptation."
+  },
+  {
+    "repository": "anthropics--skills",
+    "path": "skills/webapp-testing/SKILL.md",
+    "coverage": "full semantic entrypoint read",
+    "decision": "exclude",
+    "finding": "Existing browser capability overlaps; universal networkidle is unsuitable for continuously active apps and black-box-before-source rule conflicts with review."
+  },
+  {
+    "repository": "anthropics--skills",
+    "path": "skills/web-artifacts-builder/SKILL.md",
+    "coverage": "full semantic entrypoint read",
+    "decision": "exclude",
+    "finding": "Claude artifact-specific scaffold; forced stack and optional verification before sharing not research workflow."
+  },
+  {
+    "repository": "anthropics--skills",
+    "path": "skills/internal-comms/SKILL.md",
+    "coverage": "full semantic entrypoint read",
+    "decision": "exclude",
+    "finding": "Company comms routing not research method; existing reporting guidance suffices."
+  },
+  {
+    "repository": "anthropics--skills",
+    "path": "skills/brand-guidelines/SKILL.md",
+    "coverage": "full semantic entrypoint read",
+    "decision": "exclude",
+    "finding": "Anthropic colors/fonts not user branding or conference styling."
+  },
+  {
+    "repository": "anthropics--skills",
+    "path": "skills/theme-factory/SKILL.md",
+    "coverage": "full semantic entrypoint read",
+    "decision": "exclude",
+    "finding": "Palette choice workflow not scientific plotting/venue requirements; avoid blanket confirmation."
+  },
+  {
+    "repository": "anthropics--skills",
+    "path": "template/SKILL.md",
+    "coverage": "full semantic entrypoint read",
+    "decision": "exclude",
+    "finding": "Empty scaffold, no reusable domain substance."
+  },
+  {
+    "repository": "NVIDIA--skills",
+    "path": "skills/rag-eval/SKILL.md",
+    "coverage": "full semantic entrypoint read",
+    "decision": "reference-only",
+    "finding": "Specific NVIDIA filesystem/endpoint contract plus RAGAS judge; not generic research eval. Needs development/test split and calibrated judge; current SKS uses own stack."
+  },
+  {
+    "repository": "NVIDIA--skills",
+    "path": "skills/nemotron-retrieval-recipes/SKILL.md",
+    "coverage": "full semantic entrypoint read",
+    "decision": "reference-only",
+    "finding": "Good current-checkout/source/preview and recall-vs-rerank separation; tied to adopted Nemotron recipes. Conditional if user selects models; do not substitute framework."
+  },
+  {
+    "repository": "NVIDIA--skills",
+    "path": "skills/nemo-rl-auto-research/SKILL.md",
+    "coverage": "full semantic entrypoint read",
+    "decision": "reference-only",
+    "finding": "Useful bounded fallback campaign, preserved failed branches and smoke-versus-evidence distinction. NeMo companion/hardware specificity, untracked TSV and universal approval need adaptation; transfer ideas into experiment reference."
+  },
+  {
+    "repository": "microsoft--skills",
+    "path": ".github/plugins/deep-wiki/skills/wiki-researcher/SKILL.md",
+    "coverage": "full semantic entrypoint read",
+    "decision": "reference-only",
+    "finding": "Grounded traces useful but CBM overlaps; prescribed five iterations/diagrams and repo-context questions overburden. Currentbranch is not defaultbranch; no call sites does not prove dead code."
+  },
+  {
+    "repository": "microsoft--skills",
+    "path": ".github/plugins/deep-wiki/skills/wiki-architect/SKILL.md",
+    "coverage": "full semantic entrypoint read",
+    "decision": "reference-only",
+    "finding": "Grounded catalog useful but four audience guides/glossary quota too broad; not literature concept map."
+  },
+  {
+    "repository": "microsoft--skills",
+    "path": ".github/skills/continual-learning/SKILL.md",
+    "coverage": "full semantic entrypoint read",
+    "decision": "exclude",
+    "finding": "Copilot SQLite/hook memory autosaves/prunes; not personal learning and duplicates existing manual state. Unsupported exponential gain and toolfailure pattern can misgeneralize."
+  },
+  {
+    "repository": "google--skills",
+    "path": "skills/cloud/agent-platform-eval-flywheel/SKILL.md",
+    "coverage": "full semantic entrypoint read",
+    "decision": "reference-only",
+    "finding": "Useful failure taxonomy; fixed5-10 iterations/noenv/temperature0 determinism assertions inappropriate. Postfix rerunStage3 alone can grade stale responses withoutStage2. No heldout separation; missing judge_model contradicts own sample; internal import contradicts nointernal rule. Platform-specific, no adoption."
+  },
+  {
+    "repository": "anthropics--skills",
+    "path": "skills/docx/SKILL.md",
+    "coverage": "full semantic entrypoint read",
+    "decision": "exclude",
+    "finding": "OOXML tracked-run and rendering guidance useful but existing artifact capabilities duplicate it; source-available terms and Claude runtime assumptions preclude blanket reuse."
+  },
+  {
+    "repository": "anthropics--skills",
+    "path": "skills/pdf/SKILL.md",
+    "coverage": "full semantic entrypoint read",
+    "decision": "exclude",
+    "finding": "Existing PDF capability duplicates basic extraction/OCR/merge. Example None handling and all-images-in-memory OCR need care; package-specific terms."
+  },
+  {
+    "repository": "anthropics--skills",
+    "path": "skills/xlsx/SKILL.md",
+    "coverage": "full semantic entrypoint read",
+    "decision": "exclude",
+    "finding": "Formula/cache distinction useful but fixed legacy rules and editing contradiction require adaptation; duplicate artifact skill, package-specific terms."
+  },
+  {
+    "repository": "jokim1--karpathy-skills",
+    "path": "plugins/karpathy/skills/karpathy-wiki/SKILL.md",
+    "coverage": "full semantic entrypoint read",
+    "decision": "reference-only",
+    "finding": "Cited source and deliberate updates useful. Helper manifest and forced wiki setup before ordinary questions duplicate CBM and impose task gates. Original research-map procedure avoids new runtime; helper itself not audited."
+  },
+  {
+    "repository": "jokim1--karpathy-skills",
+    "path": "plugins/karpathy/skills/karpathy-diff/SKILL.md",
+    "coverage": "full semantic entrypoint read",
+    "decision": "exclude",
+    "finding": "Task traceability useful but blanket report/approval stop even already-authorized fixes, missing-test automatic finding and broad automatic trigger overburden. Existing reviewer and project guidance sufficient."
+  },
+  {
+    "repository": "jokim1--karpathy-skills",
+    "path": "plugins/karpathy/skills/karpathy-update/SKILL.md",
+    "coverage": "full semantic entrypoint read",
+    "decision": "exclude",
+    "finding": "Plugin-specific update wrapper not research procedure. Entry point read only; update helper not executed or audited."
+  },
+  {
+    "repository": "NVIDIA--skills",
+    "path": "skills/aiq-research/SKILL.md",
+    "coverage": "full semantic entrypoint read",
+    "decision": "defer",
+    "finding": "Explicit endpoint and resumable server job handling useful. Requires deployed AI-Q backend and public helper without authentication; local backend can still use external provider credentials. Generic research trigger is too broad; returned citations still need source verification. No need another research runtime for current SKS workflow; helper not audited."
+  }
+]

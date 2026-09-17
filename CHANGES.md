@@ -16,3 +16,9 @@ The five VoltAgent definitions use the owner's Astra/low policy and explicit rea
 - **ml-paper-writing:** narrow, model-neutral paper workflow with verified citations and current venue requirements. Retained three focused writing/citation/checklist references and a portable MIT license; removed dated conference templates and redundant reference catalogs. Acquire the official current template only for an actual venue task.
 
 Whole upstream catalogs, installers, invented agent histories, cloud orchestration layers and duplicate artifact tools are not bundled as active components. The baseline retains removed material for provenance, not recommended execution.
+
+## Expanded research workflow review
+
+Add three original project procedures: literature-survey, paper-reading, and research-knowledge-map. These are not unchanged upstream imports; their conceptual sources are identified in the research workflow guide. No new runtime, watcher, index database or cloud dependency is introduced.
+
+Add an ML ablation design reference to hypothesis-generation, covering matched budgets, component interactions, retraining versus inference removal, independent final evaluation, preserved run records and shared-server execution boundaries. Clarify author-side writing versus assigned confidential peer review in ml-paper-writing. Keep the existing five agent roles.

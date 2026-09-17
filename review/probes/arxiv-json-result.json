@@ -1,0 +1,14 @@
+[
+  {
+    "fixture_entries": 0,
+    "outcome": "Expecting value"
+  },
+  {
+    "fixture_entries": 1,
+    "outcome": "single JSON document"
+  },
+  {
+    "fixture_entries": 2,
+    "outcome": "Extra data"
+  }
+]

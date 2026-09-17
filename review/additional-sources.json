@@ -1,0 +1,72 @@
+[
+  {
+    "repository": "anthropics--skills",
+    "url": "https://github.com/anthropics/skills.git",
+    "revision": "34040c9c568585f6929bedeaad110ad08f079624",
+    "tracked_files": 419,
+    "skill_entrypoints": 20
+  },
+  {
+    "repository": "anthropics--claude-code",
+    "url": "https://github.com/anthropics/claude-code.git",
+    "revision": "744fb6ab02aca7c50c43f1676a870cff184e1fca",
+    "tracked_files": 1153,
+    "skill_entrypoints": 10
+  },
+  {
+    "repository": "google-deepmind--science-skills",
+    "url": "https://github.com/google-deepmind/science-skills.git",
+    "revision": "68832757cbbf941c620b71df5756cf6e5cc287b0",
+    "tracked_files": 240,
+    "skill_entrypoints": 40
+  },
+  {
+    "repository": "microsoft--skills",
+    "url": "https://github.com/microsoft/skills.git",
+    "revision": "0bbea9f6f93232282b0c65c035b7d0ebfea452ae",
+    "tracked_files": 2203,
+    "skill_entrypoints": 200
+  },
+  {
+    "repository": "google--skills",
+    "url": "https://github.com/google/skills.git",
+    "revision": "569cb1d55ac388c2d1939104a4c52bc594fbb162",
+    "tracked_files": 823,
+    "skill_entrypoints": 153
+  },
+  {
+    "repository": "google-gemini--gemini-skills",
+    "url": "https://github.com/google-gemini/gemini-skills.git",
+    "revision": "83d82dd85446c6873ac312d8f0acb66e2e792c49",
+    "tracked_files": 18,
+    "skill_entrypoints": 3
+  },
+  {
+    "repository": "karpathy--autoresearch",
+    "url": "https://github.com/karpathy/autoresearch.git",
+    "revision": "228791fb499afffb54b46200aca536f79142f117",
+    "tracked_files": 10,
+    "skill_entrypoints": 0
+  },
+  {
+    "repository": "jokim1--karpathy-skills",
+    "url": "https://github.com/jokim1/karpathy-skills.git",
+    "revision": "fe3558d1db02ebbf28fe0c7636ed489c26778f4f",
+    "tracked_files": 53,
+    "skill_entrypoints": 5
+  },
+  {
+    "repository": "NVIDIA--skills",
+    "url": "https://github.com/NVIDIA/skills.git",
+    "revision": "f436f05b3ba6c07947de3bb7b0fce8bdc81dd3c3",
+    "tracked_files": 4973,
+    "skill_entrypoints": 366
+  },
+  {
+    "repository": "karpathy--llm-wiki",
+    "url": "https://gist.github.com/442a6bf555914893e9891c11519de94f.git",
+    "revision": "ac46de1ad27f92b28ac95459c782c07f6b8c964a",
+    "tracked_files": 1,
+    "skill_entrypoints": 0
+  }
+]

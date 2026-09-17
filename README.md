@@ -1,6 +1,6 @@
 # Personal Code Agents
 
-A small, traceable Codex library for retrieval, model evaluation, multimodal research, data pipelines and scientific writing: **five agents and six skills**.
+A small, traceable Codex library for retrieval, model evaluation, multimodal research, data pipelines and scientific writing: **five agents and nine skills**.
 
 ## What to use
 
@@ -11,6 +11,9 @@ A small, traceable Codex library for retrieval, model evaluation, multimodal res
 | eval-engineer | Retrieval, agent and multimodal evaluation design and interpretation |
 | data-engineer | Scoped ingestion/transformation work, replay behavior and data contracts |
 | performance-engineer | Measured bottlenecks, resource/concurrency diagnosis and comparisons |
+| literature-survey | Bounded search, screening records and cross-paper evidence synthesis |
+| paper-reading | Paper mechanisms, derivations and personal comprehension exercises |
+| research-knowledge-map | Deliberately maintained, source-linked research notes |
 | hypothesis-generation | Rival explanations and discriminating experiments |
 | get-available-resources | Read-only process/allocation resource inventory and advisory planning |
 | train-sentence-transformers | Retrieval/reranker training contracts and leakage-aware evaluation |
@@ -19,6 +22,8 @@ A small, traceable Codex library for retrieval, model evaluation, multimodal res
 | jupyter-notebook | Reproducible notebook scaffolds that write into the working project |
 
 Agents define responsibilities and execution boundaries. Skills supply procedures. Keep existing project guidance, CBM exploration agents and ordinary Codex workers; there is no requirement to invoke every component for every task.
+
+See the [research workflow guide](review/research-workflow.md) for literature → experiments → paper preparation and the expanded company/author review. The three added research-note skills are original procedures; the earlier imported baseline remains unchanged in history.
 
 ## Provenance and changes
 

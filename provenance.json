@@ -90,5 +90,27 @@
       "license_file": "licenses/openai--skills/LICENSE.txt",
       "upstream_url": "https://github.com/openai/skills/tree/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/jupyter-notebook"
     }
+  ],
+  "original_components": [
+    {
+      "destination": "skills/literature-survey",
+      "authorship": "Original project procedure; no upstream text or executable copied",
+      "design_sources": "review/research-workflow.md"
+    },
+    {
+      "destination": "skills/paper-reading",
+      "authorship": "Original project procedure; no upstream text or executable copied",
+      "design_sources": "review/research-workflow.md"
+    },
+    {
+      "destination": "skills/research-knowledge-map",
+      "authorship": "Original project procedure; no upstream text or executable copied",
+      "design_sources": "review/research-workflow.md"
+    },
+    {
+      "destination": "skills/hypothesis-generation/references/ml-ablation-design.md",
+      "authorship": "Original project reference",
+      "design_sources": "review/research-workflow.md"
+    }
   ]
 }
