@@ -5,13 +5,20 @@ description: Teach or critically read an AI research paper, explain its equation
 
 # Paper Reading and Learning
 
-Help the reader understand what the paper establishes, how it works, and what remains uncertain. Match the requested depth and existing background; explaining one equation does not require a full review.
+- Help the reader understand what the paper establishes, how it works, and what remains uncertain.
+- Match the requested depth and existing background; explaining one equation does not require a full review.
 
 ## Anchor the reading
 
-Load the actual paper and identify its version. Use supplements or code when the question depends on them. State what was accessible and read. An abstract supports an overview, not claims about unseen proofs, experiments or implementation. Preserve the user's notation where possible and map any renamed symbols explicitly.
+- Load the actual paper and identify its version.
+- Use supplements or code when the question depends on them.
+- State what was accessible and read.
+- An abstract supports an overview, not claims about unseen proofs, experiments or implementation.
+- Preserve the user's notation where possible and map any renamed symbols explicitly.
 
-Offer a layered reading when useful: orient on the question and claimed contribution; work through the mechanism and evidence; reconstruct the difficult derivation or experimental logic. Let the learning goal determine depth. A summary is not evidence that the user understands the paper.
+- Offer a layered reading when useful: orient on the question and claimed contribution; work through the mechanism and evidence; reconstruct the difficult derivation or experimental logic.
+- Let the learning goal determine depth.
+- A summary is not evidence that the user understands the paper.
 
 ## Explain mechanisms precisely
 
@@ -23,16 +30,31 @@ Offer a layered reading when useful: orient on the question and claimed contribu
 
 ## Critique without inventing defects
 
-Check whether the evidence supports the stated claim under its assumptions. Consider split leakage, selection, dependence, missing controls, judge validity and alternative explanations when relevant. Tie criticism to a source location and consequence; no quota of weaknesses or mandatory rejection verdict. Distinguish missing reporting from demonstrated implementation errors. Proposed experiments remain proposals.
+- Check whether the evidence supports the stated claim under its assumptions.
+- Consider split leakage, selection, dependence, missing controls, judge validity and alternative explanations when relevant.
+- Tie criticism to a source location and consequence; no quota of weaknesses or mandatory rejection verdict.
+- Distinguish missing reporting from demonstrated implementation errors.
+- Proposed experiments remain proposals.
 
-For author-side rehearsal or public-paper study, critique normally. If this is an assigned confidential peer review, check the applicable venue's current AI/confidentiality rules before processing the material. A public-paper learning workflow does not override those rules or authorize disclosure.
+- For author-side rehearsal or public-paper study, critique normally.
+- If this is an assigned confidential peer review, check the applicable venue's current AI/confidentiality rules before processing the material.
+- A public-paper learning workflow does not override those rules or authorize disclosure.
 
 ## Support personal learning
 
-When the user wants interactive learning, offer a targeted teach-back, derivation exercise or prediction question and evaluate their actual answer. Keep hints and solutions distinguishable so the learner can try first. Do not invent learner responses or infer mastery from silence. For noninteractive notes, include optional self-check questions with separate answers; do not force a quiz before answering the request.
+- When the user wants interactive learning, offer a targeted teach-back, derivation exercise or prediction question and evaluate their actual answer.
+- Keep hints and solutions distinguishable so the learner can try first.
+- Do not invent learner responses or infer mastery from silence.
+- For noninteractive notes, include optional self-check questions with separate answers; do not force a quiz before answering the request.
 
-Useful notes include the paper/version, key idea in the reader's terms, prerequisites, one worked mechanism, evidence and limits, unresolved questions, and a next learning step. Preserve the user's own annotations separately from generated explanations. Store notes only in the requested or established project/personal location. Scheduling reminders or maintaining a learning profile requires a corresponding request.
+- Useful notes include the paper/version, key idea in the reader's terms, prerequisites, one worked mechanism, evidence and limits, unresolved questions, and a next learning step.
+- Preserve the user's own annotations separately from generated explanations.
+- Store notes only in the requested or established project/personal location.
+- Scheduling reminders or maintaining a learning profile requires a corresponding request.
 
 ## Design provenance
 
-Original project procedure. Layered reading draws on Keshav's paper-reading note; validity checks were informed by the reviewed K-Dense scientific-critical-thinking skill. See [research workflow and sources](https://github.com/amitbcp/personal_code_agents/blob/main/review/research-workflow.md). This is learning support, not a validated assessment of the reader's expertise.
+- Original project procedure.
+- Layered reading draws on Keshav's paper-reading note; validity checks were informed by the reviewed K-Dense scientific-critical-thinking skill.
+- See [research workflow and sources](https://github.com/amitbcp/personal_code_agents/blob/main/review/research-workflow.md).
+- This is learning support, not a validated assessment of the reader's expertise.

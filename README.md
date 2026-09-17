@@ -6,11 +6,11 @@ A small, traceable Codex library for retrieval, model evaluation, multimodal res
 
 | Component | Job |
 |---|---|
-| reviewer | Independent correctness/regression review with concrete evidence |
-| scientific-literature-researcher | Primary-source research, contradictions and search boundaries |
-| eval-engineer | Retrieval, agent and multimodal evaluation design and interpretation |
+| reviewer | Correctness/regression review, reproductions and scoped fixes |
+| scientific-literature-researcher | Primary-source research and durable literature artifacts |
+| eval-engineer | Design, implement, run and interpret research evaluations |
 | data-engineer | Scoped ingestion/transformation work, replay behavior and data contracts |
-| performance-engineer | Measured bottlenecks, resource/concurrency diagnosis and comparisons |
+| performance-engineer | Profile, optimize and verify performance and resource use |
 | literature-survey | Bounded search, screening records and cross-paper evidence synthesis |
 | paper-reading | Paper mechanisms, derivations and personal comprehension exercises |
 | research-knowledge-map | OKF project wiki, research knowledge and scoped task-end upkeep |
@@ -21,9 +21,19 @@ A small, traceable Codex library for retrieval, model evaluation, multimodal res
 | ml-paper-writing | Evidence-linked manuscripts, verified citations and venue-aware preparation |
 | jupyter-notebook | Reproducible notebook scaffolds that write into the working project |
 
+All five custom agents use `sandbox_mode = "workspace-write"`. Agents define responsibilities and task scope; they can write artifacts, implement assigned changes and run relevant checks without routine confirmation. They preserve an explicit planning-only or review-only request. Actual writes remain subject to the active host/profile permissions.
+
 Agents define responsibilities and execution boundaries. Skills supply procedures. Keep existing project guidance, CBM exploration agents and ordinary Codex workers; there is no requirement to invoke every component for every task.
 
 See the [research workflow guide](review/research-workflow.md) for literature → experiments → paper preparation and the expanded company/author review. The three added research-note skills are original procedures; the earlier imported baseline remains unchanged in history.
+
+## Autonomous work and server storage
+
+Use existing task authorization and let agents resolve routine details; ask only when a real blocker or missing consequential authorization prevents progress. Coordinate ownership when multiple agents edit the same project. Instructions use headings and bullets for maintainability.
+
+Vulcan NFS is shared across nodes; NVMe is node-local. Keep durable project source, knowledge notes and final results on shared storage. Use a verified suitable local NVMe path for staging, scratch work and caches, then preserve required outputs before allocation/node loss. Check mount permissions, available space and actual allocations. Existing CBM/runtime locations are not relocated by this library.
+
+See [current design and upstream differences](review/current-design.md) for the permission, automation and formatting changes and the exact scope retained or removed.
 
 ## OKF project wiki setup
 
@@ -61,7 +71,7 @@ Official references: [custom agents](https://learn.chatgpt.com/docs/agent-config
 
 ## Final predeployment review
 
-The [final audit](review/final-predeployment.md) documents native-format checks, exact change scope, inherited defects fixed, validation and remaining live-discovery checks. This collection includes substantial rewrites as well as light adaptations; it is not an unchanged upstream mirror.
+The [predeployment audit snapshot](review/final-predeployment.md) documents the earlier review and fixes. The [current design](review/current-design.md) supersedes its permissions, formatting and size table. This collection includes substantial rewrites as well as light adaptations; it is not an unchanged upstream mirror.
 
 ## Maintain and validate
 

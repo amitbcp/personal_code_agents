@@ -5,7 +5,7 @@ description: Hugging Face CLI to estimate the required memory to load Safetensor
 
 <!-- Modified 2026-09-16 for Personal Code Agents; see CHANGES.md and provenance.json. -->
 
-`hf_mem` estimates the required memory for inference, including model weights and an optional KV cache, for Safetensors and GGUF for models on the Hugging Face Hub using HTTP Range requests i.e., without downloading or loading any weights locally.
+- `hf_mem` estimates the required memory for inference, including model weights and an optional KV cache, for Safetensors and GGUF for models on the Hugging Face Hub using HTTP Range requests i.e., without downloading or loading any weights locally.
 
 ## When to use?
 
@@ -20,21 +20,23 @@ description: Hugging Face CLI to estimate the required memory to load Safetensor
 
 ## How to run?
 
-Run with `--model-id` pointing to the Hugging Face Hub repository which will check that it either contains Safetensors (via `model.safetensors`, `model.safetensors.index.json` if sharded, or `model_index.json` for Diffusers) or GGUF model weights within.
+- Run with `--model-id` pointing to the Hugging Face Hub repository which will check that it either contains Safetensors (via `model.safetensors`, `model.safetensors.index.json` if sharded, or `model_index.json` for Diffusers) or GGUF model weights within.
 
 ```bash
 uvx hf-mem --model-id <model-id> --json-output
 ```
 
-If the repository contains GGUF model weights in multiple precisions / quantizations, the estimations will be on a per-file basis, whereas for inference you won't load all of those but rather only a single precision. This being said, for GGUF you might as well need to provide `--gguf-file` to target the specific file (or path if sharded) you want to run.
+- If the repository contains GGUF model weights in multiple precisions / quantizations, the estimations will be on a per-file basis, whereas for inference you won't load all of those but rather only a single precision.
+- This being said, for GGUF you might as well need to provide `--gguf-file` to target the specific file (or path if sharded) you want to run.
 
 ```bash
 uvx hf-mem --model-id <model-id> --gguf-file <file-or-path> --json-output
 ```
 
-Additionally, `hf-mem` comes with an `--experimental` flag that will also calculate the KV cache memory requirements too, useful for large-language models, meaning it applies to LLMs (`...ForCausalLM`), VLMs (`...ForConditionalGeneration`), and GGUF models.
+- Additionally, `hf-mem` comes with an `--experimental` flag that will also calculate the KV cache memory requirements too, useful for large-language models, meaning it applies to LLMs (`...ForCausalLM`), VLMs (`...ForConditionalGeneration`), and GGUF models.
 
-As per the context window, it will be read from the default or overridden with `--max-model-len` a la vLLM. And, same goes for the KV cache precision, which will default to the model precision unless manually set via `--kv-cache-dtype` a la vLLM too.
+- As per the context window, it will be read from the default or overridden with `--max-model-len` a la vLLM.
+- And, same goes for the KV cache precision, which will default to the model precision unless manually set via `--kv-cache-dtype` a la vLLM too.
 
 For Safetensors use as:
 
@@ -82,6 +84,14 @@ uvx hf-mem --model-id unsloth/Qwen3.5-397B-A17B-GGUF --gguf-file Q4_K_M --experi
 
 ## Interpreting results in this collection
 
-Estimates are planning inputs, not proof that a workload fits. Compare against the memory available to the actual process/allocation; Apple unified memory is shared with the CPU. Account separately for activations, runtime workspaces, batch/sequence length, fragmentation and other processes. Experimental KV-cache estimates have additional model/backend assumptions. Validate a representative small workload before allocating the full job.
+- Estimates are planning inputs, not proof that a workload fits.
+- Compare against the memory available to the actual process/allocation; Apple unified memory is shared with the CPU.
+- Account separately for activations, runtime workspaces, batch/sequence length, fragmentation and other processes.
+- Experimental KV-cache estimates have additional model/backend assumptions.
+- Validate a representative small workload before allocating the full job.
 
-Use an existing project tool/environment when available. If installation is needed, record the tool version used; `uvx` can download a package. Pass credentials through the existing environment or credential store, never a command-line token printed in logs. Missing metadata means unknown, not zero memory. This skill does not launch cloud jobs or terminate running work.
+- Use an existing project tool/environment when available.
+- If installation is needed, record the tool version used; `uvx` can download a package.
+- Pass credentials through the existing environment or credential store, never a command-line token printed in logs.
+- Missing metadata means unknown, not zero memory.
+- This skill does not launch cloud jobs or terminate running work.

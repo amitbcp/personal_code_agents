@@ -187,7 +187,7 @@ AI output is not evidence and cannot grant approval.
 
 NIST AI 600-1 identifies generative-AI risks including confabulation, data privacy, harmful bias/homogenization, information integrity, human–AI configuration, and dangerous recommendations. Mitigate by:
 
-- independent human ideation before AI expansion;
+- preserving independent human ideas when available and generating alternatives before converging;
 - generating rivals from different disciplinary perspectives;
 - separating source retrieval from claim synthesis;
 - checking primary sources directly;

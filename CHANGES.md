@@ -34,3 +34,11 @@ This is not a minimally edited mirror. All five agent instruction bodies were re
 Resolve inherited hypothesis-reference human-review gates to agree with the entrypoint, identify the historical upstream-only security report, and document the optional formal schema's inability to represent authorized external sensitive-data use. Helpers remain unchanged; do not falsify declarations to satisfy them. Restore concise retrieval prompt/scoring parity and in-batch false-negative checks, pipeline evolution semantics, and manuscript template-migration guidance. Clarify CBM fallback and performance-role scope.
 
 Fix inherited nbformat 4.5 templates by adding stable unique cell IDs and removing an unobserved Python version claim; the helper also stops imposing that version. A new generated-notebook regression failed for both kinds before the fix and passed afterward. Both templates and generated outputs were checked with the installed nbformat validator.
+
+## Write-enabled agents, autonomy and bullet formatting — 2026-09-17
+
+- Set all five agents to workspace-write and remove role-wide analysis-only restrictions. Evaluation and performance can implement and run assigned work; literature can maintain artifacts; reviewer can reproduce/test and fix when included in the task. Explicit review/planning-only requests remain scoped.
+- Use headings and bullets in every agent instruction body and all nine skill entrypoints, retaining substantive content. This formatting change makes historical line counts incomparable without word counts.
+- Explain shared Vulcan NFS versus node-local NVMe and ownership of shared writes. Use local storage for staging/scratch/caches where suitable and preserve durable results; no existing cache or database is migrated.
+- Clarify autonomous routine choices and existing authorization. Resource detection remains non-executing; its output no longer reads as a prohibition on continuing an already-authorized workload. Remove human-brainstorming and unconditional preregistration-review prerequisites while retaining actual study/policy requirements.
+- Separate earlier optional-cookbook removals from necessary corrections in the current design report. Those reductions were design choices, not native-format requirements. No further supporting recipes are removed in this update.

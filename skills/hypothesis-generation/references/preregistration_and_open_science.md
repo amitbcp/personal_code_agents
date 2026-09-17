@@ -201,5 +201,5 @@ The result:
 - is marked as an unregistered draft;
 - includes every candidate without ranking;
 - carries unresolved placeholders;
-- requires human review and repository-specific completion;
+- requires repository-specific completion and any review required by the study or governing policy before registration;
 - does not submit, register, upload, or transmit anything.

@@ -1,5 +1,7 @@
 # Final predeployment review — 2026-09-17
 
+> Historical snapshot of the d3554c8 audit. Later user-directed workspace-write permissions and bullet formatting supersede the role boundaries and size table below. See [current design](current-design.md).
+
 ## Verdict
 
 The five agents and nine skills follow native Codex package conventions and form a coherent collection for the intended research work. The concrete defects found in this pass were fixed and re-reviewed. The repository is ready for a bounded deployment/discovery pilot. This does not establish a best possible prompt, Astra-specific superiority, or that every remote profile will discover and enforce these settings correctly.

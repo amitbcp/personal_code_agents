@@ -1,0 +1,128 @@
+[
+  {
+    "path": "agents/data-engineer.toml",
+    "baseline_lines": 41,
+    "baseline_words": 287,
+    "prior_audit_lines": 18,
+    "prior_audit_words": 268,
+    "current_lines": 58,
+    "current_words": 480
+  },
+  {
+    "path": "agents/eval-engineer.toml",
+    "baseline_lines": 36,
+    "baseline_words": 236,
+    "prior_audit_lines": 16,
+    "prior_audit_words": 245,
+    "current_lines": 52,
+    "current_words": 460
+  },
+  {
+    "path": "agents/performance-engineer.toml",
+    "baseline_lines": 41,
+    "baseline_words": 300,
+    "prior_audit_lines": 16,
+    "prior_audit_words": 252,
+    "current_lines": 51,
+    "current_words": 462
+  },
+  {
+    "path": "agents/reviewer.toml",
+    "baseline_lines": 41,
+    "baseline_words": 295,
+    "prior_audit_lines": 14,
+    "prior_audit_words": 247,
+    "current_lines": 50,
+    "current_words": 439
+  },
+  {
+    "path": "agents/scientific-literature-researcher.toml",
+    "baseline_lines": 41,
+    "baseline_words": 338,
+    "prior_audit_lines": 16,
+    "prior_audit_words": 253,
+    "current_lines": 50,
+    "current_words": 443
+  },
+  {
+    "path": "skills/get-available-resources/SKILL.md",
+    "baseline_lines": 277,
+    "baseline_words": 1316,
+    "prior_audit_lines": 273,
+    "prior_audit_words": 1394,
+    "current_lines": 270,
+    "current_words": 1509
+  },
+  {
+    "path": "skills/hf-mem/SKILL.md",
+    "baseline_lines": 79,
+    "baseline_words": 440,
+    "prior_audit_lines": 87,
+    "prior_audit_words": 569,
+    "current_lines": 97,
+    "current_words": 586
+  },
+  {
+    "path": "skills/hypothesis-generation/SKILL.md",
+    "baseline_lines": 281,
+    "baseline_words": 1946,
+    "prior_audit_lines": 61,
+    "prior_audit_words": 929,
+    "current_lines": 97,
+    "current_words": 977
+  },
+  {
+    "path": "skills/jupyter-notebook/SKILL.md",
+    "baseline_lines": 107,
+    "baseline_words": 521,
+    "prior_audit_lines": 108,
+    "prior_audit_words": 602,
+    "current_lines": 122,
+    "current_words": 628
+  },
+  {
+    "path": "skills/literature-survey/SKILL.md",
+    "baseline_lines": null,
+    "baseline_words": null,
+    "prior_audit_lines": 39,
+    "prior_audit_words": 540,
+    "current_lines": 68,
+    "current_words": 579
+  },
+  {
+    "path": "skills/ml-paper-writing/SKILL.md",
+    "baseline_lines": 982,
+    "baseline_words": 5246,
+    "prior_audit_lines": 52,
+    "prior_audit_words": 806,
+    "current_lines": 84,
+    "current_words": 853
+  },
+  {
+    "path": "skills/paper-reading/SKILL.md",
+    "baseline_lines": null,
+    "baseline_words": null,
+    "prior_audit_lines": 38,
+    "prior_audit_words": 586,
+    "current_lines": 60,
+    "current_words": 616
+  },
+  {
+    "path": "skills/research-knowledge-map/SKILL.md",
+    "baseline_lines": null,
+    "baseline_words": null,
+    "prior_audit_lines": 41,
+    "prior_audit_words": 682,
+    "current_lines": 73,
+    "current_words": 724
+  },
+  {
+    "path": "skills/train-sentence-transformers/SKILL.md",
+    "baseline_lines": 109,
+    "baseline_words": 1176,
+    "prior_audit_lines": 49,
+    "prior_audit_words": 596,
+    "current_lines": 62,
+    "current_words": 616
+  }
+]
