@@ -126,7 +126,7 @@ Complete `assets/search_boundary_template.json`. At minimum include:
 - known access and coverage limitations;
 - novelty status.
 
-Use `novelty_status: not_assessed` unless a qualified human has reviewed a fit-for-purpose search. Even a comprehensive search supports only a bounded statement.
+Use `novelty_status: not_assessed` until a fit-for-purpose search and its source evidence have been checked. Routine agent verification can proceed within task authorization; obtain specialist review when the claim or governing policy requires it. Even a comprehensive search supports only a bounded statement.
 
 ## Evidence ledger
 

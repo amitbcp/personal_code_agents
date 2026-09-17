@@ -1,0 +1,100 @@
+[
+  {
+    "path": "agents/data-engineer.toml",
+    "baseline_lines": 41,
+    "current_lines": 18,
+    "baseline_words": 287,
+    "current_words": 268
+  },
+  {
+    "path": "agents/eval-engineer.toml",
+    "baseline_lines": 36,
+    "current_lines": 16,
+    "baseline_words": 236,
+    "current_words": 245
+  },
+  {
+    "path": "agents/performance-engineer.toml",
+    "baseline_lines": 41,
+    "current_lines": 16,
+    "baseline_words": 300,
+    "current_words": 252
+  },
+  {
+    "path": "agents/reviewer.toml",
+    "baseline_lines": 41,
+    "current_lines": 14,
+    "baseline_words": 295,
+    "current_words": 247
+  },
+  {
+    "path": "agents/scientific-literature-researcher.toml",
+    "baseline_lines": 41,
+    "current_lines": 16,
+    "baseline_words": 338,
+    "current_words": 253
+  },
+  {
+    "path": "skills/get-available-resources/SKILL.md",
+    "baseline_lines": 277,
+    "current_lines": 273,
+    "baseline_words": 1316,
+    "current_words": 1394
+  },
+  {
+    "path": "skills/hf-mem/SKILL.md",
+    "baseline_lines": 79,
+    "current_lines": 87,
+    "baseline_words": 440,
+    "current_words": 569
+  },
+  {
+    "path": "skills/hypothesis-generation/SKILL.md",
+    "baseline_lines": 281,
+    "current_lines": 61,
+    "baseline_words": 1946,
+    "current_words": 929
+  },
+  {
+    "path": "skills/jupyter-notebook/SKILL.md",
+    "baseline_lines": 107,
+    "current_lines": 108,
+    "baseline_words": 521,
+    "current_words": 602
+  },
+  {
+    "path": "skills/literature-survey/SKILL.md",
+    "baseline_lines": null,
+    "current_lines": 39,
+    "baseline_words": null,
+    "current_words": 540
+  },
+  {
+    "path": "skills/ml-paper-writing/SKILL.md",
+    "baseline_lines": 982,
+    "current_lines": 52,
+    "baseline_words": 5246,
+    "current_words": 806
+  },
+  {
+    "path": "skills/paper-reading/SKILL.md",
+    "baseline_lines": null,
+    "current_lines": 38,
+    "baseline_words": null,
+    "current_words": 586
+  },
+  {
+    "path": "skills/research-knowledge-map/SKILL.md",
+    "baseline_lines": null,
+    "current_lines": 41,
+    "baseline_words": null,
+    "current_words": 682
+  },
+  {
+    "path": "skills/train-sentence-transformers/SKILL.md",
+    "baseline_lines": 109,
+    "current_lines": 49,
+    "baseline_words": 1176,
+    "current_words": 596
+  }
+]

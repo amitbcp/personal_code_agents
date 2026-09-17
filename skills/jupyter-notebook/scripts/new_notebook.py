@@ -1,4 +1,4 @@
-# Modified 2026-09-16: resolve default output from the working project.
+# Modified 2026-09-17: project-local output; leave kernel version to execution.
 from __future__ import annotations
 
 import argparse
@@ -68,7 +68,6 @@ def update_title(notebook: dict[str, Any], kind: str, title: str) -> None:
     language_info = metadata.setdefault("language_info", {})
     if isinstance(language_info, dict):
         language_info.setdefault("name", "python")
-        language_info.setdefault("version", "3.12")
 
 
 def default_output(repo_root: Path, title: str) -> Path:

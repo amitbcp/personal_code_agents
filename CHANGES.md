@@ -12,7 +12,7 @@ The five VoltAgent definitions use the owner's Astra/low policy and explicit rea
 - **hf-mem:** added limits of estimates, allocation/unified-memory interpretation, runtime overhead and credential handling. Tool versions must be recorded if installed; this skill does not launch jobs.
 - **jupyter-notebook:** resolve the helper relative to the loaded skill instead of rewriting CODEX_HOME. Default output now derives from the working project, not the skill checkout. Preserve overwrite protection; test output location, notebook shape and overwrite behavior. Clarify compute/execution boundaries.
 - **hypothesis-generation:** compact ML rival-test workflow with conditional domain-specific gates and existing authorization; retained local validators are optional aids, not scientific proof.
-- **get-available-resources:** compact allocation-aware guidance; planning is advisory and never authorizes terminating healthy work. A memory-budget warning is not a safe-to-launch decision. Retained scripts remain unchanged.
+- **get-available-resources:** targeted additions to the upstream allocation/resource guidance; planning is advisory and never authorizes terminating healthy work. A memory-budget warning is not a safe-to-launch decision. Retained scripts remain unchanged.
 - **ml-paper-writing:** narrow, model-neutral paper workflow with verified citations and current venue requirements. Retained three focused writing/citation/checklist references and a portable MIT license; removed dated conference templates and redundant reference catalogs. Acquire the official current template only for an actual venue task.
 
 Whole upstream catalogs, installers, invented agent histories, cloud orchestration layers and duplicate artifact tools are not bundled as active components. The baseline retains removed material for provenance, not recommended execution.
@@ -26,3 +26,11 @@ Add an ML ablation design reference to hypothesis-generation, covering matched b
 ## OKF project wiki setup
 
 Expand research-knowledge-map in place for Google OKF v0.2, preserving its name and the five-agent/nine-skill collection. Add self-contained format and project setup references, including an original project-root maintenance rule. Routine task-end updates use standing project authorization; bulk imports remain explicitly scoped. Preserve raw sources, personal annotations and historical verification context, and coordinate shared-file writers. No runtime, hooks or active-profile changes.
+
+## Final predeployment audit — 2026-09-17
+
+This is not a minimally edited mirror. All five agent instruction bodies were rewritten; hypothesis-generation, ml-paper-writing and train-sentence-transformers were substantially narrowed. hf-mem, get-available-resources and jupyter-notebook retain most upstream structure. The three original research skills have no upstream file baseline. See [change scope and final audit](review/final-predeployment.md).
+
+Resolve inherited hypothesis-reference human-review gates to agree with the entrypoint, identify the historical upstream-only security report, and document the optional formal schema's inability to represent authorized external sensitive-data use. Helpers remain unchanged; do not falsify declarations to satisfy them. Restore concise retrieval prompt/scoring parity and in-batch false-negative checks, pipeline evolution semantics, and manuscript template-migration guidance. Clarify CBM fallback and performance-role scope.
+
+Fix inherited nbformat 4.5 templates by adding stable unique cell IDs and removing an unobserved Python version claim; the helper also stops imposing that version. A new generated-notebook regression failed for both kinds before the fix and passed afterward. Both templates and generated outputs were checked with the installed nbformat validator.

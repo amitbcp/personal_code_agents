@@ -23,7 +23,7 @@ For each substantive contribution, identify the supporting experiment, derivatio
 
 Distinguish measured results, interpretation, hypotheses, and planned work. Never fill missing results with plausible numbers or convert a qualitative example into an aggregate finding. Mark unresolved facts clearly in drafts; remove or qualify them before finalization.
 
-For empirical results, preserve the actual protocol: dataset/version and grouping, train/development/test boundaries, baselines, selection procedure, model/prompt/checkpoint versions, metric definitions, seeds, hardware, cost and latency where relevant. State whether uncertainty is standard deviation, standard error, or a confidence interval and how it was computed. Do not claim statistical significance from overlapping point estimates or invent missing runs.
+For empirical results, preserve the actual protocol: dataset/version and grouping, train/development/test boundaries, baselines, selection procedure, model/prompt/checkpoint versions, metric definitions, seeds, hardware, cost and latency where relevant. State whether uncertainty is standard deviation, standard error, or a confidence interval and how it was computed. Do not claim statistical significance from point estimates alone or invent missing runs.
 
 Use development data for tuning, prompt selection, calibration, and ablations. Preserve the project's held-out test protocol; do not rerun or tune against a test set to improve the story. Suggest missing experiments separately with their purpose and resource needs.
 
@@ -47,6 +47,6 @@ This skill supports author-side writing and critique. For an assigned confidenti
 
 For venue-specific preparation, read the current official instructions for the exact venue, year, track, and submission stage. Record the source and access date in the project notes. These instructions determine page limits, templates, anonymity, supplements, checklists, disclosure, and bibliography format. Do not infer current rules from older papers or this skill.
 
-Use the project's existing template when appropriate. If replacement is necessary, obtain the official current template for the requested venue and preserve its notices; do not change margins/fonts to bypass requirements. Use the existing build/render workflow and inspect the resulting figures, equations, references, and page breaks.
+Use the project's existing template when appropriate. If replacement is necessary, obtain the official current template for the requested venue and preserve its notices; do not change margins/fonts to bypass requirements. For a venue/template migration, first compile the untouched target template, then transfer manuscript content and bibliography while retaining the target style; do not carry over the old preamble wholesale. Preserve the original manuscript so formatting failures can be isolated. Use the existing build/render workflow and inspect the resulting figures, equations, references, and page breaks.
 
 Use [checklists.md](references/checklists.md) for a full manuscript handoff. Report changed sections, checks actually completed, and unresolved evidence/citation/formatting gaps. Do not claim a draft is submission-ready when those checks are incomplete.

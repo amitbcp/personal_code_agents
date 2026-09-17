@@ -171,10 +171,10 @@ The bundled scripts make no network, model, image, or external-service calls and
 
 ### Human accountability
 
-An accountable human must:
+Human authors retain accountability for scientific decisions and required approvals. Agents may perform source verification, calculations and routine analysis within existing authorization; do not require new human sign-off for each ordinary step. The responsible workflow should:
 
 - own the question, candidate set, and final scientific decisions;
-- verify every citation, identifier, quotation, and source-to-claim link;
+- verify citations, identifiers, quotations, and source-to-claim links against actual sources;
 - verify calculations and scientific plausibility;
 - inspect omitted rivals and boundary conditions;
 - review ethics, safety, privacy, dual-use, and regulatory implications;

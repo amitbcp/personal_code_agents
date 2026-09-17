@@ -31,6 +31,19 @@ class NotebookScaffoldTests(unittest.TestCase):
                     self.assertEqual(cell["outputs"], [])
                     self.assertIsNone(cell["execution_count"])
 
+    def test_both_kinds_have_valid_unique_cell_ids(self):
+        for kind in ("experiment", "tutorial"):
+            with self.subTest(kind=kind), tempfile.TemporaryDirectory() as tmp:
+                target = Path(tmp) / "example.ipynb"
+                result = self.run_helper(tmp, "--kind", kind, "--title", "Example",
+                                         "--out", str(target))
+                self.assertEqual(result.returncode, 0, result.stderr)
+                notebook = json.loads(target.read_text())
+                ids = [cell.get("id", "") for cell in notebook["cells"]]
+                for cell_id in ids:
+                    self.assertRegex(cell_id, r"^[A-Za-z0-9_-]{1,64}$")
+                self.assertEqual(len(ids), len(set(ids)))
+
     def test_existing_work_requires_explicit_overwrite(self):
         with tempfile.TemporaryDirectory() as tmp:
             target = Path(tmp) / "notes.ipynb"

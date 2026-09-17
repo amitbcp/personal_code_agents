@@ -205,7 +205,7 @@ Allowed novelty states:
 - `requires_specialist_review`
 - `supported_by_documented_comprehensive_search`
 
-The final state still requires a qualified human and supports only a bounded statement.
+The final state needs a documented search and source-level verification and supports only a bounded statement. Obtain specialist review when the claim or governing policy requires it.
 
 ## 7. Preregistration scaffold generator
 
@@ -227,6 +227,10 @@ The generator:
 
 It never uploads, registers, timestamps externally, or submits the result.
 
+## Formal schema limitation
+
+The inherited hypothesis record rejects `sensitive_or_unpublished_data_sent_externally: true` even for authorized use; it has no field to represent that authorization. For such a history, use the Markdown workflow and record the actual conditions. Do not claim no transfer occurred simply to pass validation. This is a limitation of an optional tool, not a new prohibition on already-authorized work.
+
 ## Suggested local sequence
 
 ```bash
@@ -243,4 +247,4 @@ python3 scripts/generate_preregistration_scaffold.py \
   local-record.json -o local-preregistration.md
 ```
 
-Qualified human review remains mandatory after every command.
+These commands check declared structure, not scientific validity. Inspect their results and verify the underlying evidence within the task authorization. Obtain qualified human review when the study or governing policy requires it; ordinary local validation does not add a new approval gate.

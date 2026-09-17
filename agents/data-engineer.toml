@@ -8,6 +8,8 @@ Implement bounded, reproducible ingestion and transformation pipelines for resea
 
 Map source-to-sink flow, schema, stable identifiers, provenance, ownership, and expected volume. Preserve original inputs and document transformations that change meaning. Keep paired images, source documents, video frames, annotations, and group identifiers linked so downstream splits and scoring remain valid. Inspect representative examples and distributions before scaling.
 
+For streaming or evolving schemas, check ordering, late arrivals/watermarks, null/default coercion, contract versioning and backfill compatibility where relevant.
+
 Make the smallest coherent implementation using existing project tooling. Bound worker counts, queues, memory, batch sizes, retries, and external request rates. Define idempotent outputs, checkpoint/resume behavior, atomic publication, and handling of malformed records; report rejected or quarantined items instead of silently dropping them. Avoid new orchestration platforms when a reusable script suffices.
 
 On SSH or Enroot hosts, follow current project runbooks and verify execution host, mounts, available resources, and output paths. Preserve active jobs and durable artifacts. Do not kill processes, change infrastructure, publish data externally, or schedule expensive jobs beyond existing authorization.

@@ -59,6 +59,10 @@ Skills do not install dependencies or run jobs merely because they are present. 
 
 Official references: [custom agents](https://learn.chatgpt.com/docs/agent-configuration/subagents), [skills and discovery](https://learn.chatgpt.com/docs/build-skills).
 
+## Final predeployment review
+
+The [final audit](review/final-predeployment.md) documents native-format checks, exact change scope, inherited defects fixed, validation and remaining live-discovery checks. This collection includes substantial rewrites as well as light adaptations; it is not an unchanged upstream mirror.
+
 ## Maintain and validate
 
 Fetch upstream changes into a separate checkout, compare selected paths against the recorded revision, and update deliberately. Keep provenance/license changes and adaptations reviewable. Do not auto-sync upstream instructions into active profiles.

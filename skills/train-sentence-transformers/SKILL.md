@@ -4,7 +4,7 @@ description: Design or update Sentence Transformers training for dense retrieval
 license: Apache-2.0
 ---
 
-<!-- Modified 2026-09-16 for Personal Code Agents; see CHANGES.md and provenance.json. -->
+<!-- Modified 2026-09-17 for Personal Code Agents; see CHANGES.md and provenance.json. -->
 
 # Train retrieval models
 
@@ -20,6 +20,8 @@ Run on the authorized execution host/allocation. Keep Python environments and ca
 
 - Establish the unit of independence and split before mining or training. Related queries, source documents and near duplicates can cross splits even when row IDs differ.
 - Mine negatives from permitted training data; record the retriever, candidate depth, filtering and positive-label coverage. Do not mine from the held-out final test set.
+- Preserve query/document prompts, tokenizer/truncation, pooling, normalization and similarity conventions across training, evaluation and inference. Verify the intended settings survive checkpoint save/reload; model-card defaults are not interchangeable across model families.
+- For in-batch negatives, inspect batch sampling and duplicates: another query’s positive may also be relevant to this query. Check the loss’s handling of multiple positives and false negatives.
 - Check real batch columns, order, tensor shapes, masks and labels against the installed loss API. Pointwise labels, pairwise margins and listwise relevance are different contracts.
 - Choose class weighting, score activation, sequence length and negative counts from the experiment; no universal setting is optimal.
 - For cached contrastive losses, sparse regularizers or multi-vector scoring, verify library compatibility and inspect a small forward/backward batch before scaling.

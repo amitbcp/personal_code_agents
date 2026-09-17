@@ -82,7 +82,7 @@ The planned mapping from data to estimand, prediction, or descriptive target. It
 
 ### Evidence
 
-Empirical observations or documented sources that bear on claims. Record whether a source supports, challenges, contextualizes, or supplies a method. Citation presence does not prove claim support; a human must inspect the source.
+Empirical observations or documented sources that bear on claims. Record whether a source supports, challenges, contextualizes, or supplies a method. Citation presence does not prove claim support; inspect the actual source and record the supporting location. Agent verification can proceed within task authorization; human sign-off applies where required.
 
 ## Candidate lifecycle
 

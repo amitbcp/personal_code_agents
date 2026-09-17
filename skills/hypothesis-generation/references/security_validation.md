@@ -1,6 +1,6 @@
-# Security Validation Record
+# Historical upstream security validation record
 
-Validation date: **2026-07-23** (local project date).
+Upstream validation date: **2026-07-23**. This retained record describes the pinned K-Dense repository, not tests or guarantees for Personal Code Agents. Its repository-level test suite, scanners and SECURITY.md are not bundled here. Commands below are historical upstream reproduction commands and will not run unchanged in this collection. Current local validation is documented in the Personal Code Agents README and review reports.
 
 ## Baseline
 
@@ -53,7 +53,7 @@ The LLM-assisted pull-request scan reported:
 1. **Missing `allowed-tools` declaration** — informational. The Agent Skills specification does not require this optional field. The compatibility declaration and body constrain bundled tools to bounded local standard-library processing with no network, models, images, credentials, or environment access.
 2. **Missing referenced files** — analyzer false positive. It invented paths under `templates/` and mismatched existing `assets/` and `references/` files. The deterministic local-path test resolved every documented bundled path and passed. No script implements network fallback or substitute retrieval.
 
-Neither LOW finding permits data transmission, credential access, scientific scoring, or automatic hypothesis selection. No CRITICAL or HIGH issue remains.
+Neither LOW finding permits data transmission, credential access, scientific scoring, or automatic hypothesis selection. The upstream record reported no remaining CRITICAL or HIGH issue at that date.
 
 ## Reproduction
 
