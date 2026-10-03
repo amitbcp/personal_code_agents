@@ -114,5 +114,38 @@
       "authorship": "Original project reference",
       "design_sources": "review/research-workflow.md"
     }
+  ],
+  "maintenance_updates": [
+    {
+      "updated_on": "2026-10-02",
+      "repository": "https://github.com/K-Dense-AI/scientific-agent-skills",
+      "revision": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
+      "license_file": "licenses/K-Dense-AI--scientific-agent-skills/LICENSE.md",
+      "original_imports_preserved": true,
+      "exact_upstream_files": [
+        "skills/get-available-resources/references/resource_semantics.md",
+        "skills/get-available-resources/references/snapshot_schema.md",
+        "skills/get-available-resources/references/sources.md",
+        "skills/get-available-resources/scripts/_common.py",
+        "skills/get-available-resources/scripts/accelerator_diagnostics.py",
+        "skills/get-available-resources/scripts/detect_resources.py",
+        "skills/get-available-resources/scripts/plan_workload.py",
+        "skills/get-available-resources/scripts/snapshot_tools.py",
+        "skills/hypothesis-generation/assets/preregistration_scaffold_template.md",
+        "skills/hypothesis-generation/scripts/generate_preregistration_scaffold.py"
+      ],
+      "adapted_files": {
+        "skills/get-available-resources/SKILL.md": "Updated helper semantics and partial-release provenance; retained local scope, existing authorization and node storage guidance.",
+        "skills/hypothesis-generation/scripts/_common.py": "Backported strict constants, bounded nesting and calendar dates; added local rejection of floating-point overflow such as 1e999.",
+        "skills/hypothesis-generation/references/tool_reference.md": "Documented new validation limits and source-record date; retained local adaptations.",
+        "skills/hypothesis-generation/SKILL.md": "Clarified frozen nonadaptive holdout protocol and partial refresh provenance.",
+        "skills/hypothesis-generation/references/ml-ablation-design.md": "Clarified affected-stage invalidation, compatible raw-output reuse for evaluator-only corrections, and frozen confirmation protocols."
+      },
+      "regression_tests": {
+        "tests/test_resource_helpers.py": "18 test methods adapted from the same upstream revision plus two local safety cases; imports isolated for combined suite.",
+        "tests/test_hypothesis_helpers.py": "Original offline subprocess regression cases."
+      },
+      "review": "review/2026-10-02-research-helper-refresh.md"
+    }
   ]
 }

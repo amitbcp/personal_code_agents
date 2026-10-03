@@ -3,7 +3,8 @@ name: get-available-resources
 description: Detect host inventory and effective CPU, memory, disk, scheduler, container, and accelerator limits when a user asks for resource-aware planning or before a clearly resource-sensitive local workload. Produces a redacted JSON snapshot and conservative planning helpers without stress tests or assuming visible host hardware is usable.
 license: MIT
 metadata:
-  version: "1.3"
+  version: "1.5-local"
+  last-reviewed: "2026-10-02"
   skill-author: K-Dense Inc.
 ---
 
@@ -12,7 +13,7 @@ metadata:
 - Build a conservative picture of resources available to the **current process**.
 - Keep host inventory, process affinity, cgroup/container limits, scheduler allocation, and accelerator runtime usability separate.
 
-- **Runtime:** Python 3.11+ on Linux, macOS, or Windows; standard library by default, optional psutil 7.2.2; accelerator and scheduler CLIs are optional read-only probes.
+- **Runtime:** Python 3.11+ on Linux, macOS, or Windows; standard library by default, optional psutil 7.2.2; accelerator management CLIs are optional read-only probes.
 
 ## Safety contract
 
@@ -56,7 +57,7 @@ python scripts/detect_resources.py
 python scripts/detect_resources.py --output resource-snapshot.json
 ```
 
-- Explicit output is restricted to one `.json` filename in the current directory, uses private permissions, rejects symlinks and path traversal, and refuses overwrite unless `--force` is supplied.
+- Explicit output is restricted to one `.json` filename in the current directory, uses mode 0600 on POSIX, rejects symlinks and path traversal, and refuses overwrite unless `--force` is supplied. Forced output also rejects hard links and non-regular files; Windows privacy additionally depends on directory ACLs.
 
 ### Optional psutil enhancement
 
@@ -64,7 +65,7 @@ python scripts/detect_resources.py --output resource-snapshot.json
 - For broader cross-platform physical-core, affinity, available-memory, swap, and disk coverage:
 
 ```bash
-uv pip install "psutil==7.2.2"
+uv run --no-project --with "psutil==7.2.2" python scripts/detect_resources.py
 ```
 
 - The import is lazy.
@@ -117,8 +118,8 @@ Keep these separate:
 Each device is a backend **candidate**:
 
 - NVIDIA GPU → CUDA candidate;
-- AMD GPU → ROCm candidate;
-- Apple integrated GPU → Metal candidate.
+- AMD management record → ROCm candidate;
+- macOS display record → Metal candidate, retaining its hardware vendor.
 
 Management-query visibility does not establish:
 
@@ -129,13 +130,15 @@ Management-query visibility does not establish:
 5. operator/data-type support.
 
 - Therefore `runtime_usable_devices` remains null and each device says `runtime_compatibility: not_tested`.
-- Visibility/allocation counts are upper bounds, not guarantees.
+- Visibility/allocation counts constrain observed management records; MIG and AMD partition enumeration can differ from framework-device counts.
+- AMD `reported_total_bytes` describes a device-reported pool with unresolved shared-memory topology. It is never added to the RAM budget.
 
 ### Disk
 
 - `capacity_bytes`, filesystem `free_bytes`, user-available blocks, and a non-writing permission check are distinct.
 - Filesystem or project quotas can still be stricter.
 - The absolute working path is always redacted.
+- Inspect scratch, caches and output filesystems from their own target directories. Budget temporary and final copies that coexist; input-filesystem free space does not establish output capacity.
 
 ### Scheduler and container
 
@@ -153,7 +156,8 @@ Management-query visibility does not establish:
 - Recommendations alone do not authorize launching jobs, terminating healthy jobs, changing allocations, or indexing code.
 - Separately authorized workloads may proceed within their existing task and project permissions without a new approval request.
 - A numeric worker recommendation is not permission or proof of feasibility.
-- In particular, `MEMORY_REQUIREMENT_EXCEEDS_BUDGET` can accompany `suggested_workers: 1`; that plan is infeasible under the supplied memory estimate.
+- A known budget that cannot fit one worker returns zero workers and threads with `recommendation.status: insufficient_memory`; do not launch that plan.
+- Unknown CPU capacity or available memory returns `review_required`. Positive counts are provisional estimates, not reservations.
 - Reduce the workload or obtain a suitable allocation before launch.
 - Unknown memory also requires a measured or independently bounded estimate.
 
@@ -226,7 +230,7 @@ One failed probe must not erase successful observations. Inspect:
 ## Platform notes
 
 - **Linux:** reads only bounded `/proc` and cgroup v2 files. Ancestor CPU and
-  memory limits are considered.
+  memory limits visible through the cgroup2 mount are considered. Hidden ancestors and cgroup v1 limits are not measured; unreadable membership remains unknown.
 - **macOS:** uses fixed `sysctl` keys and a bounded
   `system_profiler SPDisplaysDataType -json` query. Apple silicon memory is
   unified.
@@ -262,9 +266,9 @@ One failed probe must not erase successful observations. Inspect:
 - `references/snapshot_schema.md` — schema 1.1 contract.
 - `references/sources.md` — dated official-source ledger.
 
-- Official documentation was refreshed on **2026-07-23**; consult [`references/sources.md`](references/sources.md) before changing semantics or dependency pins.
+- Upstream official-source documentation was refreshed on **2026-10-01**; consult [`references/sources.md`](references/sources.md) before changing semantics or dependency pins.
 
 ## Provenance
 
-- Adapted from K-Dense Scientific Agent Skills, revision `330c8e764435a731eff571e3efdda70b363d0792`, under MIT.
+- Adapted from K-Dense Scientific Agent Skills, revision `154988403bb5a18e9d3c0ce4e6d5e2e4b184a298`, under MIT; local scope, autonomy and storage guidance is preserved.
 - Preserve license notices; manuscript citation is an editorial choice, not an automatic action.

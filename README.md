@@ -47,6 +47,7 @@ The first commit, [fcf3ff0](https://github.com/amitbcp/personal_code_agents/comm
 
 - [provenance.json](provenance.json): exact upstream revisions, original paths and licenses for every import.
 - [CHANGES.md](CHANGES.md): adaptations and removed material.
+- [2026-10-02 refresh](review/2026-10-02-research-helper-refresh.md): targeted upstream helper fixes, compatibility changes and offline validation.
 - [review/README.md](review/README.md): coverage, decisions, exclusions and limitations.
 - `licenses/`: original license texts; package-specific notices remain in place.
 
