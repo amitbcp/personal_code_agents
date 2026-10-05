@@ -13,14 +13,20 @@ Prefer the `web-vitals` library over hand-written `PerformanceObserver` code. It
 ```javascript
 import {onCLS, onINP, onLCP} from 'web-vitals';
 
+// Populate this allowlist with the application's approved router names.
+const allowedRouteNames = new Set(['home', 'customer-order-detail']);
+
 function sendToRum({name, value, rating, id, navigationType}) {
+  // APP_ROUTE_NAME must be a static router name, never a URL or user value.
+  const candidate = window.APP_ROUTE_NAME;
+  const route = allowedRouteNames.has(candidate) ? candidate : undefined;
   const body = JSON.stringify({
     name,
     value,
     rating,
     id,
     navigationType,
-    path: location.pathname,
+    route, // JSON serialization omits this field when no approved name is available.
     release: window.APP_RELEASE
   });
 
@@ -34,7 +40,7 @@ onINP(sendToRum);
 onLCP(sendToRum);
 ```
 
-Adapt the payload to the existing backend. Do not include query strings, user-entered text, full DOM fragments, or other personal data. The `web-vitals/attribution` build can add element or script details; review them and send only explicit, low-cardinality fields that fit the site's privacy model.
+Adapt the route allowlist and payload to the existing router/backend. Do not fall back to raw pathname: path segments can contain personal identifiers. Omit the route field when no approved static name or template is available. Do not include query strings, user-entered text, full DOM fragments, or other personal data. The `web-vitals/attribution` build can add element or script details; review them and send only explicit, low-cardinality fields that fit the site's privacy model.
 
 ## Collection rules
 

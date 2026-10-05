@@ -53,9 +53,7 @@ def test_reimplements(a, b):
     assert add(a, b) == a + b
 ```
 
-If `add` is `a + b`, this asserts `a + b == a + b`. The test survives any bug the two
-expressions share. Reach for an algebraic property instead — commutativity, identity,
-associativity — which constrains the function without restating it.
+This is a useful oracle when addition is the independently specified contract. Similarity to a short current implementation does not make it tautological. Reject expectations copied mechanically from the implementation or computed through the same defective helper. Supplement independent oracles with algebraic checks rather than replacing them: XOR obeys commutativity, associativity and zero identity but is not integer addition.
 
 ## Finding the tests
 

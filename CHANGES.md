@@ -55,3 +55,10 @@ Fix inherited nbformat 4.5 templates by adding stable unique cell IDs and removi
 ## 2026-10-05 — Selected engineering, figures and UI workflows
 
 Added eight source-attributed Codex skills, with pinned upstream baselines and per-package licenses. Adapted host tooling, authorized completion, durable paths and narrow triggers. Extended existing manuscript, OKF and reviewer guidance. See review/2026-10-05-compatibility.md and the three import reports for tests and limits.
+
+## 2026-10-05 — Astra Ultra follow-up corrections
+
+- Preserve independently specified test oracles; distinguish them from self-comparisons or duplicated defective logic.
+- Correct Hypothesis exhausted-assumption behavior to health-check/unsatisfiable failures.
+- Make the RUM example allowlist static router names and omit unapproved route data, rather than sending raw URL paths.
+- Add executable offline RUM and arithmetic-oracle examples; all 32 tests pass. Skill validators pass. Deploy only the three changed skill files with per-profile backups.

@@ -39,14 +39,8 @@ first before settling for the second.
 
 ## The two ways a property test asserts nothing
 
-- **Tautology.** `assert add(a, b) == a + b` restates the implementation; no bug they
-  share can fail it. Pick a property that constrains the function without recomputing
-  it. Note the exception: `f(x) == f(x)` is a genuine determinism property when `f`
-  is not obviously pure — serializers over dicts or sets, hashing, anything reading
-  the clock.
-- **Vacuity.** `assume()` that filters out nearly every input passes without
-  exercising anything, and self-contradictory `assume()` passes having run zero cases.
-  Push constraints into the strategy so the generator produces valid inputs directly.
+- **Tautology.** An assertion that compares a value with itself, or computes its expectation using the same potentially defective helper, cannot independently check the intended contract. A specification-based oracle such as `add(a, b) == a + b` is valid when addition is the independent contract, even if the current implementation is short. Preserve that oracle and supplement it with algebraic properties; those laws alone may admit incorrect implementations. Repeated calls can test determinism when that is the intended property.
+- **Vacuity and rejected inputs.** A reachable test that conditionally skips every meaningful assertion may pass vacuously. Excessive or contradictory Hypothesis `assume()` filters instead can produce a health-check failure or unsatisfiable-input error; do not report that as a passing zero-case test. Generate valid inputs directly where practical and verify that the intended assertions execute.
 
 ## Where to look next
 
