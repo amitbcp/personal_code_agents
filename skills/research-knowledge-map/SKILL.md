@@ -35,6 +35,10 @@ description: Create, query, and maintain an OKF project wiki or research knowled
   - Trivial edits and unchanged knowledge need no entry.
 - **Check/refresh:** on a requested health check, inspect relevant links, source versions, contradictions and stale pages. Distinguish unavailable sources from retracted claims. Do not rewrite valid pages or run experiments merely to make the wiki look fresh.
 
+## Domain vocabulary
+
+- When domain concepts, terminology or invariants change, read [domain-vocabulary.md](references/domain-vocabulary.md). Reconcile definitions against current code and evidence in existing canonical/OKF pages; do not create a competing glossary or decision tree.
+
 ## Record knowledge precisely
 
 - Each consequential claim needs a source and location/version, with conditions and evidence status.

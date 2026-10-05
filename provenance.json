@@ -89,6 +89,116 @@
       "upstream_path": "skills/.curated/jupyter-notebook",
       "license_file": "licenses/openai--skills/LICENSE.txt",
       "upstream_url": "https://github.com/openai/skills/tree/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/jupyter-notebook"
+    },
+    {
+      "destination": "skills/codebase-design",
+      "repository": "https://github.com/mattpocock/skills",
+      "revision": "4588b32ecab9ecc9fc8cc6b6c5e7d675b6004b0d",
+      "upstream_path": "skills/engineering/codebase-design",
+      "license_file": "licenses/mattpocock-MIT.txt",
+      "baseline": "review/upstream-2026-10-05/codebase-design"
+    },
+    {
+      "destination": "skills/improve-codebase-architecture",
+      "repository": "https://github.com/mattpocock/skills",
+      "revision": "4588b32ecab9ecc9fc8cc6b6c5e7d675b6004b0d",
+      "upstream_path": "skills/engineering/improve-codebase-architecture",
+      "license_file": "licenses/mattpocock-MIT.txt",
+      "baseline": "review/upstream-2026-10-05/improve-codebase-architecture"
+    },
+    {
+      "destination": "skills/diagnosing-bugs",
+      "repository": "https://github.com/mattpocock/skills",
+      "revision": "4588b32ecab9ecc9fc8cc6b6c5e7d675b6004b0d",
+      "upstream_path": "skills/engineering/diagnosing-bugs",
+      "license_file": "licenses/mattpocock-MIT.txt",
+      "baseline": "review/upstream-2026-10-05/diagnosing-bugs"
+    },
+    {
+      "destination": "skills/property-based-testing",
+      "repository": "https://github.com/trailofbits/skills",
+      "revision": "82fe8226252622fa807643bdca1710901198553a",
+      "upstream_path": "plugins/property-based-testing/skills/property-based-testing",
+      "license_file": "licenses/trailofbits-CC-BY-SA-4.0.txt",
+      "baseline": "review/upstream-2026-10-05/property-based-testing"
+    },
+    {
+      "destination": "skills/improve-codebase-architecture/references/system-design.md",
+      "repository": "https://github.com/anthropics/knowledge-work-plugins.git",
+      "revision": "8444efcd48f7012f09797778a36a33e73d0861f4",
+      "upstream_path": "engineering/skills/system-design/SKILL.md",
+      "license_file": "licenses/anthropic-work-Apache-2.0.txt",
+      "baseline": "review/upstream-2026-10-05/system-design"
+    },
+    {
+      "destination": "skills/archify",
+      "repository": "https://github.com/tt-a1i/archify",
+      "revision": "73aaa0696e8f72c232ea710e6fa94fd953f3e773",
+      "upstream_path": "archify",
+      "license_file": "licenses/tt-a1i--archify/LICENSE",
+      "upstream_url": "https://github.com/tt-a1i/archify/tree/73aaa0696e8f72c232ea710e6fa94fd953f3e773/archify",
+      "snapshot": "review/upstream-2026-10-05/archify",
+      "license": "MIT"
+    },
+    {
+      "destination": "skills/frontend-design",
+      "repository": "https://github.com/anthropics/skills",
+      "revision": "683bc88e56f3e09ba94f7055977f3d3aa499f202",
+      "upstream_path": "skills/frontend-design",
+      "license_file": "licenses/anthropics--skills/LICENSE.txt",
+      "upstream_url": "https://github.com/anthropics/skills/tree/683bc88e56f3e09ba94f7055977f3d3aa499f202/skills/frontend-design",
+      "snapshot": "review/upstream-2026-10-05/frontend-design",
+      "license": "Apache-2.0"
+    },
+    {
+      "destination": "skills/web-performance",
+      "repository": "https://github.com/addyosmani/web-quality-skills",
+      "revision": "afa8da942115f2961fdbfa80807ea0b232ff6c00",
+      "upstream_path": "skills/performance",
+      "license_file": "licenses/addyosmani--web-quality-skills/LICENSE",
+      "upstream_url": "https://github.com/addyosmani/web-quality-skills/tree/afa8da942115f2961fdbfa80807ea0b232ff6c00/skills/performance",
+      "snapshot": "review/upstream-2026-10-05/web-performance",
+      "license": "MIT"
+    },
+    {
+      "destination": "skills/scientific-visualization",
+      "repository": "https://github.com/K-Dense-AI/scientific-agent-skills",
+      "revision": "92ace75ac21efe19a620434e0ca4e356081fe807",
+      "upstream_path": "skills/scientific-visualization",
+      "license_file": "skills/scientific-visualization/LICENSE.md",
+      "baseline": "review/upstream-2026-10-05/K-Dense-AI--scientific-agent-skills"
+    },
+    {
+      "destination": "skills/ml-paper-writing/references/story-evidence-review.md",
+      "repository": "https://github.com/master-cai/research-paper-writing-skills.git",
+      "revision": "77e7c2c1ba06f7d71844873147665437a03aac1b",
+      "upstream_path": "research-paper-writing",
+      "license_file": "licenses/master-cai--research-paper-writing/LICENSE",
+      "baseline": "review/upstream-2026-10-05/master-cai--research-paper-writing"
+    },
+    {
+      "destination": "skills/scientific-visualization/references/figure-review.md",
+      "repository": "https://github.com/quantumbfs/sci-brain.git",
+      "revision": "855fd57439a34bd63d867ed8ef5b149a14c6b5c6",
+      "upstream_path": "skills/how-to-review-figure",
+      "license_file": "licenses/QuantumBFS--sci-brain/LICENSE",
+      "baseline": "review/upstream-2026-10-05/QuantumBFS--sci-brain"
+    },
+    {
+      "destination": "skills/research-knowledge-map/references/domain-vocabulary.md",
+      "repository": "https://github.com/mattpocock/skills.git",
+      "revision": "4588b32ecab9ecc9fc8cc6b6c5e7d675b6004b0d",
+      "upstream_path": "skills/engineering/domain-modeling",
+      "license_file": "licenses/mattpocock--skills/LICENSE",
+      "baseline": "review/upstream-2026-10-05/mattpocock--skills"
+    },
+    {
+      "destination": "agents/reviewer.toml",
+      "repository": "https://github.com/mattpocock/skills",
+      "revision": "4588b32ecab9ecc9fc8cc6b6c5e7d675b6004b0d",
+      "upstream_path": "skills/engineering/code-review; skills/engineering/tdd",
+      "license_file": "licenses/mattpocock-MIT.txt",
+      "note": "Additional adapted review/testing principles; original VoltAgent mapping retained."
     }
   ],
   "original_components": [

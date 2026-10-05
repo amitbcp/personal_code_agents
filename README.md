@@ -1,6 +1,6 @@
 # Personal Code Agents
 
-A small, traceable Codex library for retrieval, model evaluation, multimodal research, data pipelines and scientific writing: **five agents and nine skills**.
+A small, traceable Codex library for retrieval, model evaluation, multimodal research, data pipelines and scientific writing: **five agents and seventeen skills**.
 
 ## What to use
 
@@ -26,6 +26,20 @@ All five custom agents use `sandbox_mode = "workspace-write"`. Agents define res
 Agents define responsibilities and execution boundaries. Skills supply procedures. Keep existing project guidance, CBM exploration agents and ordinary Codex workers; there is no requirement to invoke every component for every task.
 
 See the [research workflow guide](review/research-workflow.md) for literature → experiments → paper preparation and the expanded company/author review. The three added research-note skills are original procedures; the earlier imported baseline remains unchanged in history.
+
+
+## Engineering, figures and UI additions (2026-10-05)
+
+- `codebase-design`: module boundaries and caller complexity.
+- `improve-codebase-architecture`: scoped architecture survey and optional system-design checklist.
+- `diagnosing-bugs`: reproduction, hypothesis testing and original-scenario verification.
+- `property-based-testing`: invariant and generated-input testing.
+- `scientific-visualization`: scientific plots, export helpers and figure QA.
+- `archify`: typed architecture/dataflow diagrams with standalone rendering; Node >=18.
+- `frontend-design`: intentional UI design that preserves existing product conventions.
+- `web-performance`: measured web responsiveness and loading analysis.
+
+The manuscript and OKF skills gain scoped evidence-review and domain-vocabulary references; the reviewer gains separate requirements/standards checks and behavior-facing test guidance. See [compatibility](review/2026-10-05-compatibility.md) and the engineering, research and visual import reports beside it. Original source snapshots retain `SKILL.md.txt` filenames to prevent accidental discovery. Only `skills/` and selected `agents/` belong in a runtime profile.
 
 ## Autonomous work and server storage
 

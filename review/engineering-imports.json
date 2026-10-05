@@ -1,0 +1,52 @@
+[
+  {
+    "name": "codebase-design",
+    "upstream_repository": "https://github.com/mattpocock/skills",
+    "revision": "4588b32ecab9ecc9fc8cc6b6c5e7d675b6004b0d",
+    "source_path": "skills/engineering/codebase-design",
+    "license": "MIT",
+    "license_file": "licenses/mattpocock-MIT.txt",
+    "baseline": "review/upstream-2026-10-05/codebase-design",
+    "adapted_path": "skills/codebase-design"
+  },
+  {
+    "name": "improve-codebase-architecture",
+    "upstream_repository": "https://github.com/mattpocock/skills",
+    "revision": "4588b32ecab9ecc9fc8cc6b6c5e7d675b6004b0d",
+    "source_path": "skills/engineering/improve-codebase-architecture",
+    "license": "MIT",
+    "license_file": "licenses/mattpocock-MIT.txt",
+    "baseline": "review/upstream-2026-10-05/improve-codebase-architecture",
+    "adapted_path": "skills/improve-codebase-architecture"
+  },
+  {
+    "name": "diagnosing-bugs",
+    "upstream_repository": "https://github.com/mattpocock/skills",
+    "revision": "4588b32ecab9ecc9fc8cc6b6c5e7d675b6004b0d",
+    "source_path": "skills/engineering/diagnosing-bugs",
+    "license": "MIT",
+    "license_file": "licenses/mattpocock-MIT.txt",
+    "baseline": "review/upstream-2026-10-05/diagnosing-bugs",
+    "adapted_path": "skills/diagnosing-bugs"
+  },
+  {
+    "name": "property-based-testing",
+    "upstream_repository": "https://github.com/trailofbits/skills",
+    "revision": "82fe8226252622fa807643bdca1710901198553a",
+    "source_path": "plugins/property-based-testing/skills/property-based-testing",
+    "license": "CC-BY-SA-4.0",
+    "license_file": "licenses/trailofbits-CC-BY-SA-4.0.txt",
+    "baseline": "review/upstream-2026-10-05/property-based-testing",
+    "adapted_path": "skills/property-based-testing"
+  },
+  {
+    "name": "system-design-reference",
+    "upstream_repository": "https://github.com/anthropics/knowledge-work-plugins.git",
+    "revision": "8444efcd48f7012f09797778a36a33e73d0861f4",
+    "source_path": "engineering/skills/system-design/SKILL.md",
+    "license": "Apache-2.0",
+    "license_file": "licenses/anthropic-work-Apache-2.0.txt",
+    "baseline": "review/upstream-2026-10-05/system-design",
+    "adapted_path": "skills/improve-codebase-architecture/references/system-design.md"
+  }
+]

@@ -15,6 +15,7 @@ developer_instructions = """
 
 - Read applicable repository guidance and identify the baseline, changed behavior, callers, and relevant tests.
 - Use codebase-memory tools when available for structural questions, checking coverage and following source evidence; otherwise use targeted source search.
+- Check requirements and repository standards independently: a conventionally written change can still implement the wrong behavior. Use the task/spec and documented standards as separate evidence; disclose a missing spec without blocking other useful review.
 - Trace each suspected defect through a concrete trigger and observable consequence.
 - Check failure/retry paths, authorization boundaries, sensitive outputs, schema changes, and concurrency where the change makes them relevant.
 
@@ -23,6 +24,8 @@ developer_instructions = """
 - For research code, inspect leakage, grouping, metric implementation, prompt/data versioning, and claims that exceed the recorded experiment.
 - Treat a missing measurement as an evidence gap, not a demonstrated regression.
 - Run the smallest relevant check that distinguishes competing explanations within the task scope.
+- Prefer behavior-facing regression tests at stable interfaces, with expectations from a specification, independently worked example or known-good result. Avoid assertions that reproduce the implementation and mocks that merely enforce its internal call sequence.
+- When test-first work is appropriate, verify a meaningful failing case, implement the smallest behavior slice, then check it and refactor within scope; do not require repeated user approval for routine test boundaries.
 - Keep scratch reproductions separate from deliverable changes and verify any implemented correction.
 
 ## Findings and handoff

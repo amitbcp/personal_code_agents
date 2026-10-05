@@ -1,0 +1,32 @@
+[
+  {
+    "destination": "skills/archify",
+    "repository": "https://github.com/tt-a1i/archify",
+    "revision": "73aaa0696e8f72c232ea710e6fa94fd953f3e773",
+    "upstream_path": "archify",
+    "license_file": "licenses/tt-a1i--archify/LICENSE",
+    "upstream_url": "https://github.com/tt-a1i/archify/tree/73aaa0696e8f72c232ea710e6fa94fd953f3e773/archify",
+    "snapshot": "review/upstream-2026-10-05/archify",
+    "license": "MIT"
+  },
+  {
+    "destination": "skills/frontend-design",
+    "repository": "https://github.com/anthropics/skills",
+    "revision": "683bc88e56f3e09ba94f7055977f3d3aa499f202",
+    "upstream_path": "skills/frontend-design",
+    "license_file": "licenses/anthropics--skills/LICENSE.txt",
+    "upstream_url": "https://github.com/anthropics/skills/tree/683bc88e56f3e09ba94f7055977f3d3aa499f202/skills/frontend-design",
+    "snapshot": "review/upstream-2026-10-05/frontend-design",
+    "license": "Apache-2.0"
+  },
+  {
+    "destination": "skills/web-performance",
+    "repository": "https://github.com/addyosmani/web-quality-skills",
+    "revision": "afa8da942115f2961fdbfa80807ea0b232ff6c00",
+    "upstream_path": "skills/performance",
+    "license_file": "licenses/addyosmani--web-quality-skills/LICENSE",
+    "upstream_url": "https://github.com/addyosmani/web-quality-skills/tree/afa8da942115f2961fdbfa80807ea0b232ff6c00/skills/performance",
+    "snapshot": "review/upstream-2026-10-05/web-performance",
+    "license": "MIT"
+  }
+]

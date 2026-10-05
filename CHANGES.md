@@ -50,3 +50,8 @@ Fix inherited nbformat 4.5 templates by adding stable unique cell IDs and removi
 - Backport bounded hypothesis JSON nesting, non-finite constant rejection, strict calendar dates and scaffold source-date provenance. Also reject floating-point overflow such as `1e999`, which the upstream constants guard did not cover.
 - Clarify that a frozen, nonadaptive final-evaluation protocol can include predeclared comparisons and disclosed evaluator corrections. Reuse compatible immutable raw outputs for evaluator-only corrections; rerun affected generation stages after generation behavior changes.
 - Preserve the five agents, nine skills, models, wiki procedure and project-specific routing. Add 27 offline helper regressions; the existing three notebook tests still pass. Exact file mappings are in `provenance.json`; review and limitations are in [the refresh report](review/2026-10-02-research-helper-refresh.md).
+
+
+## 2026-10-05 — Selected engineering, figures and UI workflows
+
+Added eight source-attributed Codex skills, with pinned upstream baselines and per-package licenses. Adapted host tooling, authorized completion, durable paths and narrow triggers. Extended existing manuscript, OKF and reviewer guidance. See review/2026-10-05-compatibility.md and the three import reports for tests and limits.
