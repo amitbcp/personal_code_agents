@@ -49,6 +49,13 @@ Vulcan NFS is shared across nodes; NVMe is node-local. Keep durable project sour
 
 See [current design and upstream differences](review/current-design.md) for the permission, automation and formatting changes and the exact scope retained or removed.
 
+## Project instructions and deployment alignment
+
+- Start a new project guide from [templates/project-AGENTS.example.md](templates/project-AGENTS.example.md), then merge only relevant sections into the existing project-root `AGENTS.md`.
+- Follow [instruction layers](docs/instruction-layers.md) for global/project/skill responsibilities, model routing, local versus shared storage, and separate Git/CBM documentation policies.
+- Personal global instructions stay outside this repository. The example is an original portable guide, not a copy of global or active project instructions.
+- [2026-10-23 alignment review](review/2026-10-23-deployment-alignment.md) records what matches the Mac and both node-local profiles, what is separately managed, and what the checks do not prove.
+
 ## OKF project wiki setup
 
 The existing `research-knowledge-map` skill now supports Google OKF v0.2 project wikis. Follow its [setup guide](skills/research-knowledge-map/references/project-setup.md) to install the shared skill in the appropriate profiles, merge the project maintenance rule, and initialize a bounded source set. [Format conventions](skills/research-knowledge-map/references/okf-conventions.md) distinguish the OKF standard from our research conventions.

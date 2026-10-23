@@ -62,3 +62,9 @@ Added eight source-attributed Codex skills, with pinned upstream baselines and p
 - Correct Hypothesis exhausted-assumption behavior to health-check/unsatisfiable failures.
 - Make the RUM example allowlist static router names and omit unapproved route data, rather than sending raw URL paths.
 - Add executable offline RUM and arithmetic-oracle examples; all 32 tests pass. Skill validators pass. Deploy only the three changed skill files with per-profile backups.
+
+## Deployment alignment and project instruction example — 2026-10-23
+
+- Add an original portable project AGENTS example covering canonical sources, task completion, bounded delegation, the seventeen-skill map and separately managed CBM, scoped OKF upkeep, handoff preservation, environment/storage ownership and focused verification.
+- Explain global/project/skill responsibilities without copying personal global instructions or operational secrets into the repository. Document independent Git-ignore/indexing policy and explicit refresh for ignored-only documentation edits.
+- Record a fresh selected-library deployment audit: all 231 skill files and five agent profiles match the Mac and both node-local profiles. Preserve upstream baselines, provenance and runtime instruction content; no skill/agent body or model configuration changed.
