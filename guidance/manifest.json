@@ -1,0 +1,26 @@
+{
+  "captured_on": "2026-10-23",
+  "source": "Mac active Codex guidance directory",
+  "files": [
+    {
+      "file": "karpathy-coding-principles.md",
+      "bytes": 3040,
+      "exact_copy": true
+    },
+    {
+      "file": "research-engineering-practices.md",
+      "bytes": 5941,
+      "exact_copy": true
+    },
+    {
+      "file": "scale-and-concurrency.md",
+      "bytes": 4937,
+      "exact_copy": true
+    }
+  ],
+  "verified_against": [
+    "Mac active guidance",
+    "Vulkan 7783 node-local profile guidance",
+    "Vulkan 6269 node-local profile guidance"
+  ]
+}

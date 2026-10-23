@@ -1,0 +1,134 @@
+{
+  "captured_at": "2026-10-23T16:29:48.261729+00:00",
+  "policy": "Exact source bytes; not deployed automatically. Owner explicitly authorized public publication as-is on 2026-10-23.",
+  "files": [
+    {
+      "snapshot": "global/mac/AGENTS.md",
+      "source_host": "Mac",
+      "source_path": "/Users/aamita/.codex/AGENTS.md",
+      "source_mtime_ns": 1791223254022115399,
+      "bytes": 11967,
+      "exact_bytes_verified": true
+    },
+    {
+      "snapshot": "workspaces/mac/AGENTS.md",
+      "source_host": "Mac",
+      "source_path": "/Users/aamita/AGENTS.md",
+      "source_mtime_ns": 1791225474248769143,
+      "bytes": 4135,
+      "exact_bytes_verified": true
+    },
+    {
+      "snapshot": "projects/mac/agentic_sks/AGENTS.md",
+      "source_host": "Mac",
+      "source_path": "/Users/aamita/Oracle/oracle/bitbucket/agentic_sks/AGENTS.md",
+      "source_mtime_ns": 1792682245764637286,
+      "bytes": 8204,
+      "exact_bytes_verified": true
+    },
+    {
+      "snapshot": "projects/mac/marus/AGENTS.md",
+      "source_host": "Mac",
+      "source_path": "/Users/aamita/Oracle/amitbcp/marus/AGENTS.md",
+      "source_mtime_ns": 1791904568918491526,
+      "bytes": 9054,
+      "exact_bytes_verified": true
+    },
+    {
+      "snapshot": "projects/mac/marus-active-main/AGENTS.md",
+      "source_host": "Mac",
+      "source_path": "/Users/aamita/Oracle/amitbcp/marus/tools-local/worktrees/active-main-20261005/AGENTS.md",
+      "source_mtime_ns": 1791171636995307362,
+      "bytes": 3135,
+      "exact_bytes_verified": true
+    },
+    {
+      "snapshot": "global/vulkan-7783/AGENTS.md",
+      "source_host": "vulcan-a100v2-7783",
+      "source_path": "/mnt/localdisk/enroot/sks/codex/home/AGENTS.md",
+      "source_mtime_ns": 1792772671709501296,
+      "bytes": 10673,
+      "exact_bytes_verified": true
+    },
+    {
+      "snapshot": "projects/shared/agentic_sks/AGENTS.md",
+      "source_host": "vulcan-a100v2-7783",
+      "source_path": "/mnt/rag/aamita/project/agentic_sks/AGENTS.md",
+      "source_mtime_ns": 1792772708632531327,
+      "bytes": 27640,
+      "exact_bytes_verified": true,
+      "verified_from_hosts": [
+        "vulcan-a100v2-7783",
+        "vulcan-a100v2-6269"
+      ]
+    },
+    {
+      "snapshot": "projects/shared/sks_media/AGENTS.md",
+      "source_host": "vulcan-a100v2-7783",
+      "source_path": "/mnt/rag/aamita/project/sks_media/AGENTS.md",
+      "source_mtime_ns": 1792628806781505410,
+      "bytes": 30423,
+      "exact_bytes_verified": true,
+      "verified_from_hosts": [
+        "vulcan-a100v2-7783",
+        "vulcan-a100v2-6269"
+      ]
+    },
+    {
+      "snapshot": "projects/shared/rerank/AGENTS.md",
+      "source_host": "vulcan-a100v2-7783",
+      "source_path": "/mnt/rag/aamita/project/rerank/AGENTS.md",
+      "source_mtime_ns": 1792628806789194441,
+      "bytes": 27409,
+      "exact_bytes_verified": true,
+      "verified_from_hosts": [
+        "vulcan-a100v2-7783",
+        "vulcan-a100v2-6269"
+      ]
+    },
+    {
+      "snapshot": "projects/shared/amit/AGENTS.md",
+      "source_host": "vulcan-a100v2-7783",
+      "source_path": "/mnt/rag/aamita/research/amit/AGENTS.md",
+      "source_mtime_ns": 1792632380495245833,
+      "bytes": 11391,
+      "exact_bytes_verified": true,
+      "verified_from_hosts": [
+        "vulcan-a100v2-7783",
+        "vulcan-a100v2-6269"
+      ]
+    },
+    {
+      "snapshot": "projects/shared/marus/AGENTS.md",
+      "source_host": "vulcan-a100v2-7783",
+      "source_path": "/mnt/rag/aamita/project/marus/AGENTS.md",
+      "source_mtime_ns": 1791954591194533722,
+      "bytes": 9054,
+      "exact_bytes_verified": true,
+      "verified_from_hosts": [
+        "vulcan-a100v2-7783",
+        "vulcan-a100v2-6269"
+      ]
+    },
+    {
+      "snapshot": "projects/shared/story_to_frames_eval/AGENTS.md",
+      "source_host": "vulcan-a100v2-7783",
+      "source_path": "/mnt/rag/aamita/research/amit/tasks/research/story_to_frames_eval/AGENTS.md",
+      "source_mtime_ns": 1791225474151251316,
+      "bytes": 2092,
+      "exact_bytes_verified": true,
+      "verified_from_hosts": [
+        "vulcan-a100v2-7783",
+        "vulcan-a100v2-6269"
+      ]
+    },
+    {
+      "snapshot": "global/vulkan-6269/AGENTS.md",
+      "source_host": "vulcan-a100v2-6269",
+      "source_path": "/mnt/localdisk/enroot/sks/codex/home/AGENTS.md",
+      "source_mtime_ns": 1792772673796831020,
+      "bytes": 10673,
+      "exact_bytes_verified": true
+    }
+  ]
+}

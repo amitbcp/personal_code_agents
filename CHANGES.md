@@ -12,7 +12,7 @@ The five VoltAgent definitions use the owner's Astra/low policy and explicit rea
 - **hf-mem:** added limits of estimates, allocation/unified-memory interpretation, runtime overhead and credential handling. Tool versions must be recorded if installed; this skill does not launch jobs.
 - **jupyter-notebook:** resolve the helper relative to the loaded skill instead of rewriting CODEX_HOME. Default output now derives from the working project, not the skill checkout. Preserve overwrite protection; test output location, notebook shape and overwrite behavior. Clarify compute/execution boundaries.
 - **hypothesis-generation:** compact ML rival-test workflow with conditional domain-specific gates and existing authorization; retained local validators are optional aids, not scientific proof.
-- **get-available-resources:** targeted additions to the upstream allocation/resource guidance; planning is advisory and never authorizes terminating healthy work. A memory-budget warning is not a safe-to-launch decision. Retained scripts remain unchanged.
+- **get-available-resources:** targeted additions to the upstream allocation/resource guidance; planning is advisory and never authorizes terminating healthy work. A memory-budget warning is not a safe-to-launch decision. The original adaptation retained the scripts; the 2026-10-02 refresh below updates selected helpers.
 - **ml-paper-writing:** narrow, model-neutral paper workflow with verified citations and current venue requirements. Retained three focused writing/citation/checklist references and a portable MIT license; removed dated conference templates and redundant reference catalogs. Acquire the official current template only for an actual venue task.
 
 Whole upstream catalogs, installers, invented agent histories, cloud orchestration layers and duplicate artifact tools are not bundled as active components. The baseline retains removed material for provenance, not recommended execution.
@@ -42,3 +42,40 @@ Fix inherited nbformat 4.5 templates by adding stable unique cell IDs and removi
 - Explain shared Vulcan NFS versus node-local NVMe and ownership of shared writes. Use local storage for staging/scratch/caches where suitable and preserve durable results; no existing cache or database is migrated.
 - Clarify autonomous routine choices and existing authorization. Resource detection remains non-executing; its output no longer reads as a prohibition on continuing an already-authorized workload. Remove human-brainstorming and unconditional preregistration-review prerequisites while retaining actual study/policy requirements.
 - Separate earlier optional-cookbook removals from necessary corrections in the current design report. Those reductions were design choices, not native-format requirements. No further supporting recipes are removed in this update.
+
+## Research helper refresh — 2026-10-02
+
+- Backport reviewed K-Dense `1549884` resource detection, planning, validation and safe output fixes. Known insufficient memory now returns zero workers/threads and `insufficient_memory`; unknown CPU or memory returns `review_required`. Callers must interpret status, not just a numeric suggestion. Preserve local authorization and node storage guidance.
+- Correct visible cgroup mount/ancestor limits, heterogeneous Slurm node counts, AMD reported memory, filesystem reserved/user-available blocks and platform inventory. The AMD reported pool is not dedicated VRAM or extra RAM. Snapshot validation now rejects missing required fields; schema remains upstream 1.1.
+- Backport bounded hypothesis JSON nesting, non-finite constant rejection, strict calendar dates and scaffold source-date provenance. Also reject floating-point overflow such as `1e999`, which the upstream constants guard did not cover.
+- Clarify that a frozen, nonadaptive final-evaluation protocol can include predeclared comparisons and disclosed evaluator corrections. Reuse compatible immutable raw outputs for evaluator-only corrections; rerun affected generation stages after generation behavior changes.
+- Preserve the five agents, nine skills, models, wiki procedure and project-specific routing. Add 27 offline helper regressions; the existing three notebook tests still pass. Exact file mappings are in `provenance.json`; review and limitations are in [the refresh report](review/2026-10-02-research-helper-refresh.md).
+
+
+## 2026-10-05 — Selected engineering, figures and UI workflows
+
+Added eight source-attributed Codex skills, with pinned upstream baselines and per-package licenses. Adapted host tooling, authorized completion, durable paths and narrow triggers. Extended existing manuscript, OKF and reviewer guidance. See review/2026-10-05-compatibility.md and the three import reports for tests and limits.
+
+## 2026-10-05 — Astra Ultra follow-up corrections
+
+- Preserve independently specified test oracles; distinguish them from self-comparisons or duplicated defective logic.
+- Correct Hypothesis exhausted-assumption behavior to health-check/unsatisfiable failures.
+- Make the RUM example allowlist static router names and omit unapproved route data, rather than sending raw URL paths.
+- Add executable offline RUM and arithmetic-oracle examples; all 32 tests pass. Skill validators pass. Deploy only the three changed skill files with per-profile backups.
+
+## Deployment alignment and project instruction example — 2026-10-23
+
+- Add an original portable project AGENTS example covering canonical sources, task completion, bounded delegation, the seventeen-skill map and separately managed CBM, scoped OKF upkeep, handoff preservation, environment/storage ownership and focused verification.
+- Explain global/project/skill responsibilities without copying personal global instructions or operational secrets into the repository. Document independent Git-ignore/indexing policy and explicit refresh for ignored-only documentation edits.
+- Record a fresh selected-library deployment audit: all 231 skill files and five agent profiles match the Mac and both node-local profiles. Preserve upstream baselines, provenance and runtime instruction content; no skill/agent body or model configuration changed.
+
+## Actual instruction history — 2026-10-23
+
+- At the owner’s explicit request, add exact global, workspace and project AGENTS snapshots from the Mac and both Vulkan profiles; preserve distinct local versions and one verified copy of shared project instructions. Record source metadata without editing snapshot contents.
+- Keep the portable example and explain adaptation, source-context links, independent deployment, visibility review and excluded credential/runtime material. This replaces the earlier blanket exclusion of global AGENTS snapshots for this specifically authorized capture.
+
+## Team laptop setup and missing guidance — 2026-10-23
+
+- Add exact copies of the active Karpathy-inspired coding, research-engineering and scale/concurrency guidance; distinguish them from discoverable skills. The seventeen existing skills already include the complete research-knowledge-map/OKF references.
+- Preserve the optional local CBM skill and three read-only graph-agent configuration snapshots separately from the primary seventeen-skill/five-agent library; retain the upstream MIT notice, disclose the older skill tool-list summary and require actual native installation/path adaptation.
+- Add target-laptop preparation and verification instructions plus a reference inventory of public OpenAI bundled/runtime plugin IDs explicitly enabled in the source config. Plugin caches, binaries, credentials, private organization registrations and graph databases are not distributed.

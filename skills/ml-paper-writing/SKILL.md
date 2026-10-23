@@ -50,6 +50,7 @@ description: Draft, revise, and review ML/IR and multimodal research manuscripts
 - Explain the problem, closest prior work, method, evidence, and limits in an order suited to the venue and existing draft.
 - Do not force a fixed paragraph count or page allocation.
 
+- Use [story-evidence-review.md](references/story-evidence-review.md) for reverse outlining, story-to-result alignment and evidence-anchored review.
 - Use [writing-guide.md](references/writing-guide.md) for a substantial drafting or revision pass.
 - Preserve technical meaning and uncertainty while improving clarity.
 - Describe incremental work honestly; do not disguise extensions as wholly new methods.

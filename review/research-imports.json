@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-05",
+  "sources": [
+    {
+      "repository": "https://github.com/K-Dense-AI/scientific-agent-skills",
+      "revision": "92ace75ac21efe19a620434e0ca4e356081fe807",
+      "baseline": "review/upstream-2026-10-05/K-Dense-AI--scientific-agent-skills",
+      "files": [
+        "skills/scientific-visualization/ (complete directory)"
+      ],
+      "license": "skills/scientific-visualization/LICENSE.md"
+    },
+    {
+      "repository": "https://github.com/master-cai/research-paper-writing-skills.git",
+      "revision": "77e7c2c1ba06f7d71844873147665437a03aac1b",
+      "baseline": "review/upstream-2026-10-05/master-cai--research-paper-writing",
+      "files": [
+        "research-paper-writing/SKILL.md",
+        "research-paper-writing/references/paper-review.md",
+        "research-paper-writing/references/does-my-writing-flow-source.md"
+      ],
+      "license": "licenses/master-cai--research-paper-writing/LICENSE"
+    },
+    {
+      "repository": "https://github.com/quantumbfs/sci-brain.git",
+      "revision": "855fd57439a34bd63d867ed8ef5b149a14c6b5c6",
+      "baseline": "review/upstream-2026-10-05/QuantumBFS--sci-brain",
+      "files": [
+        "skills/review-paper/SKILL.md",
+        "skills/review-paper/checklist.md",
+        "skills/how-to-review-figure/SKILL.md",
+        "skills/how-to-review-figure/checklist.md"
+      ],
+      "license": "licenses/QuantumBFS--sci-brain/LICENSE"
+    },
+    {
+      "repository": "https://github.com/mattpocock/skills.git",
+      "revision": "4588b32ecab9ecc9fc8cc6b6c5e7d675b6004b0d",
+      "baseline": "review/upstream-2026-10-05/mattpocock--skills",
+      "files": [
+        "skills/engineering/domain-modeling/SKILL.md",
+        "skills/engineering/domain-modeling/GLOSSARY-FORMAT.md",
+        "skills/engineering/domain-modeling/ADR-FORMAT.md"
+      ],
+      "license": "licenses/mattpocock--skills/LICENSE"
+    }
+  ]
+}

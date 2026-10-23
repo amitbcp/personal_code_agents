@@ -3,9 +3,9 @@ name: hypothesis-generation
 description: Formulate evidence-bounded scientific questions, candidate hypotheses, rival explanations, causal or associational claims, discriminating predictions, measurements, and preregistration-ready analysis plans. Use when turning observations or preliminary findings into transparent, testable research plans without treating hypotheses as facts.
 license: MIT
 metadata:
-  version: "2.2"
+  version: "2.2-local.1"
   skill-author: K-Dense Inc.
-  last-reviewed: "2026-07-23"
+  last-reviewed: "2026-10-02"
 ---
 
 # Hypothesis Generation for Research Experiments
@@ -28,7 +28,7 @@ metadata:
 4. **Choose a discriminating test.** For each candidate, specify predicted result, rival prediction, result that would challenge it, assumptions, controls and indeterminate outcomes.
    - For example: a reranker’s gain might reflect more candidates rather than better ordering; hold candidate lists fixed and compare paired query outcomes.
 5. **Freeze the analysis before target outcomes.** Choose experimental unit, paired comparisons where appropriate, seeds/resampling, effect size and uncertainty, multiplicity, exclusions and stopping rule.
-   - Use train/dev data for iteration and validation for selection; touch the held-out final test only once at the end.
+   - Use train/dev data for iteration and validation for selection; reserve the held-out final test for a frozen, nonadaptive confirmation protocol; do not use its outcomes for selection.
    - Account for grouped queries/users/documents instead of assuming every row is independent.
 6. **Record the decision.** Preserve baselines, ablations, null/negative results and deviations.
    - Label post-result hypotheses exploratory.
@@ -93,5 +93,6 @@ metadata:
 ## Provenance
 
 - Adapted from K-Dense Scientific Agent Skills, revision `330c8e764435a731eff571e3efdda70b363d0792`, under MIT.
+- Validation and scaffold helpers selectively refreshed from revision `154988403bb5a18e9d3c0ce4e6d5e2e4b184a298` on 2026-10-02; the adapted research workflow remains local.
 - Preserve license notices.
 - Citation of the skill library in a manuscript is optional and should follow the user’s editorial needs.
