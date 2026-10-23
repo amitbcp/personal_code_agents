@@ -53,7 +53,7 @@ See [current design and upstream differences](review/current-design.md) for the 
 
 - Start a new project guide from [templates/project-AGENTS.example.md](templates/project-AGENTS.example.md), then merge only relevant sections into the existing project-root `AGENTS.md`.
 - Follow [instruction layers](docs/instruction-layers.md) for global/project/skill responsibilities, model routing, local versus shared storage, and separate Git/CBM documentation policies.
-- Personal global instructions stay outside this repository. The example is an original portable guide, not a copy of global or active project instructions.
+- [Actual instruction snapshots](instructions/README.md) preserve owner-authorized global, workspace and project AGENTS files with source metadata for history and team review. The portable example remains separate; snapshots require environment-specific review before reuse.
 - [2026-10-23 alignment review](review/2026-10-23-deployment-alignment.md) records what matches the Mac and both node-local profiles, what is separately managed, and what the checks do not prove.
 
 ## OKF project wiki setup
@@ -85,7 +85,7 @@ For persistent installation, select only wanted components, check for an existin
 
 Custom CODEX_HOME wrappers and older clients can expose different paths. Confirm discovery from the actual execution host/profile before rollout. Existing installations using `~/.codex/skills` should not acquire duplicate copies under another scanned directory.
 
-Mac and SSH environments need separate discovery setup. Reviewed instruction files can be shared on NFS independently of conversation history. Keep executables, Python environments, runtime caches and live index databases in the appropriate host-local location. No credentials, global AGENTS.md, machine-specific paths or conversations belong in this repository.
+Mac and SSH environments need separate discovery setup. Reviewed instruction files can be shared on NFS independently of conversation history. Keep executables, Python environments, runtime caches and live index databases in the appropriate host-local location. Owner-authorized AGENTS snapshots under `instructions/` may contain their original host/project paths. Credentials, runtime databases and conversations remain outside this repository; referenced private companions are not included automatically.
 
 Skills do not install dependencies or run jobs merely because they are present. Use the target project's environment and current official documentation. External publishing/paid compute requires authorization for that action and destination; training, reviewing or writing does not imply publishing.
 

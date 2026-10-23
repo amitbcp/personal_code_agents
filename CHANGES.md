@@ -68,3 +68,8 @@ Added eight source-attributed Codex skills, with pinned upstream baselines and p
 - Add an original portable project AGENTS example covering canonical sources, task completion, bounded delegation, the seventeen-skill map and separately managed CBM, scoped OKF upkeep, handoff preservation, environment/storage ownership and focused verification.
 - Explain global/project/skill responsibilities without copying personal global instructions or operational secrets into the repository. Document independent Git-ignore/indexing policy and explicit refresh for ignored-only documentation edits.
 - Record a fresh selected-library deployment audit: all 231 skill files and five agent profiles match the Mac and both node-local profiles. Preserve upstream baselines, provenance and runtime instruction content; no skill/agent body or model configuration changed.
+
+## Actual instruction history — 2026-10-23
+
+- At the owner’s explicit request, add exact global, workspace and project AGENTS snapshots from the Mac and both Vulkan profiles; preserve distinct local versions and one verified copy of shared project instructions. Record source metadata without editing snapshot contents.
+- Keep the portable example and explain adaptation, source-context links, independent deployment, visibility review and excluded credential/runtime material. This replaces the earlier blanket exclusion of global AGENTS snapshots for this specifically authorized capture.

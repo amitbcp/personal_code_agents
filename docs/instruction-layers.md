@@ -3,13 +3,14 @@
 ## What belongs in this repository
 
 - `agents/` and `skills/` are the selected reusable runtime library: five custom agent profiles and seventeen skills. Original imports, provenance and adaptation reviews remain separate.
+- [Actual instruction snapshots](../instructions/README.md) separately record owner-authorized global, workspace and project AGENTS files with stable paths and capture metadata. These preserve deployed content, rather than serving as portable defaults.
 - [Project AGENTS example](../templates/project-AGENTS.example.md) is an original, portable starting point. It is not a copy of personal global instructions or an active project file. Merge only relevant parts into an existing root guide and replace example paths with current project sources.
 - [Wiki setup](../skills/research-knowledge-map/references/project-setup.md) defines the default wiki/handoff layout and scoped upkeep rule. It remains authoritative for this skill's initialization procedure.
 
-## What remains outside Git
+## Source boundaries and excluded material
 
-- Personal global `AGENTS.md` and the personal guidance directory stay local to each profile. Do not copy their contents into this repository, even if the repository is private. Alignment means compatible behavior and routing, not identical files at every instruction layer.
-- Repository-specific service names, environments, ports, storage paths and private receipts belong in that project's approved operational documentation. Root project instructions should point to those sources rather than duplicate them here.
+- The active global `AGENTS.md` stays in its execution profile; explicitly authorized historical copies now live under `instructions/`. The personal guidance directory and other private companions are not included by this capture. Alignment means compatible behavior and routing, not identical files at every instruction layer.
+- The exact snapshots retain any original service, environment, port or storage references. New reusable instructions should still point to approved project sources rather than duplicate operational inventories. Review repository visibility before publishing source-specific details or future captures.
 - Authentication, conversations, live SQLite databases, CBM indexes, scratch results and installation backups are not library source.
 - Official/system/plugin skills and separately installed `codebase-memory` skills/agents are not vendored by this package. A host may legitimately expose more than seventeen skills and five agents.
 - Project-owned SKS workflow skills are maintained in their project's canonical source, not silently pulled into this generic collection.
