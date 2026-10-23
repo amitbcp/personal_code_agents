@@ -34,4 +34,4 @@ The active files were read from the Mac and both effective node-local Vulkan pro
 
 ## Current publication state
 
-Prepared locally. GitHub reports the repository public; publishing the exact host/project snapshots awaits the owner's informed visibility decision. No visibility change or push of these snapshots has occurred.
+On 2026-10-23, the owner explicitly authorized publishing these exact host/project snapshots as-is in this public repository after reviewing the visibility and disclosure concerns. Repository visibility remains public. This authorization covers this capture; future captures still require review of their contents and intended audience.

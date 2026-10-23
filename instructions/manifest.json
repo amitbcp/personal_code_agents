@@ -1,6 +1,6 @@
 {
   "captured_at": "2026-10-23T16:29:48.261729+00:00",
-  "policy": "Exact source bytes; not deployed automatically. Publishing awaits repository visibility decision.",
+  "policy": "Exact source bytes; not deployed automatically. Owner explicitly authorized public publication as-is on 2026-10-23.",
   "files": [
     {
       "snapshot": "global/mac/AGENTS.md",
