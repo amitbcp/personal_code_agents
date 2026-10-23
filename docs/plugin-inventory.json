@@ -1,0 +1,67 @@
+{
+  "observed_on": "2026-10-23",
+  "scope": "Public OpenAI bundled/runtime plugin IDs explicitly enabled in the source Mac config only. Cache-only and account/workspace-private registrations are excluded.",
+  "portable_installation_proof": false,
+  "plugins": [
+    {
+      "id": "codex-app-tools@openai-bundled",
+      "enabled_in_source_config": true,
+      "install": "Use the supported Codex distribution and available target-account catalog capabilities; this identifier need not appear as a separately installable entry. Do not copy cached runtime bundles."
+    },
+    {
+      "id": "browser@openai-bundled",
+      "enabled_in_source_config": true,
+      "install": "Use the supported Codex distribution and available target-account catalog capabilities; this identifier need not appear as a separately installable entry. Do not copy cached runtime bundles."
+    },
+    {
+      "id": "unified-computer-use@openai-bundled",
+      "enabled_in_source_config": true,
+      "install": "Use the supported Codex distribution and available target-account catalog capabilities; this identifier need not appear as a separately installable entry. Do not copy cached runtime bundles."
+    },
+    {
+      "id": "chrome@openai-bundled",
+      "enabled_in_source_config": true,
+      "install": "Use the supported Codex distribution and available target-account catalog capabilities; this identifier need not appear as a separately installable entry. Do not copy cached runtime bundles."
+    },
+    {
+      "id": "visualize@openai-bundled",
+      "enabled_in_source_config": true,
+      "install": "Use the supported Codex distribution and available target-account catalog capabilities; this identifier need not appear as a separately installable entry. Do not copy cached runtime bundles."
+    },
+    {
+      "id": "documents@openai-primary-runtime",
+      "enabled_in_source_config": true,
+      "install": "Use the supported Codex distribution and available target-account catalog capabilities; this identifier need not appear as a separately installable entry. Do not copy cached runtime bundles."
+    },
+    {
+      "id": "pdf@openai-primary-runtime",
+      "enabled_in_source_config": true,
+      "install": "Use the supported Codex distribution and available target-account catalog capabilities; this identifier need not appear as a separately installable entry. Do not copy cached runtime bundles."
+    },
+    {
+      "id": "spreadsheets@openai-primary-runtime",
+      "enabled_in_source_config": true,
+      "install": "Use the supported Codex distribution and available target-account catalog capabilities; this identifier need not appear as a separately installable entry. Do not copy cached runtime bundles."
+    },
+    {
+      "id": "presentations@openai-primary-runtime",
+      "enabled_in_source_config": true,
+      "install": "Use the supported Codex distribution and available target-account catalog capabilities; this identifier need not appear as a separately installable entry. Do not copy cached runtime bundles."
+    },
+    {
+      "id": "template-creator@openai-primary-runtime",
+      "enabled_in_source_config": true,
+      "install": "Use the supported Codex distribution and available target-account catalog capabilities; this identifier need not appear as a separately installable entry. Do not copy cached runtime bundles."
+    },
+    {
+      "id": "computer-use@openai-bundled",
+      "enabled_in_source_config": true,
+      "install": "Use the supported Codex distribution and available target-account catalog capabilities; this identifier need not appear as a separately installable entry. Do not copy cached runtime bundles."
+    },
+    {
+      "id": "code-review@openai-bundled",
+      "enabled_in_source_config": true,
+      "install": "Use the supported Codex distribution and available target-account catalog capabilities; this identifier need not appear as a separately installable entry. Do not copy cached runtime bundles."
+    }
+  ]
+}

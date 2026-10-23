@@ -39,7 +39,7 @@ See the [research workflow guide](review/research-workflow.md) for literature â†
 - `frontend-design`: intentional UI design that preserves existing product conventions.
 - `web-performance`: measured web responsiveness and loading analysis.
 
-The manuscript and OKF skills gain scoped evidence-review and domain-vocabulary references; the reviewer gains separate requirements/standards checks and behavior-facing test guidance. See [compatibility](review/2026-10-05-compatibility.md) and the engineering, research and visual import reports beside it. Original source snapshots retain `SKILL.md.txt` filenames to prevent accidental discovery. Only `skills/` and selected `agents/` belong in a runtime profile.
+The manuscript and OKF skills gain scoped evidence-review and domain-vocabulary references; the reviewer gains separate requirements/standards checks and behavior-facing test guidance. See [compatibility](review/2026-10-05-compatibility.md) and the engineering, research and visual import reports beside it. Original source snapshots retain `SKILL.md.txt` filenames to prevent accidental discovery. Install selected `skills/`, `agents/` and referenced `guidance/` into their appropriate discovery locations; do not install review snapshots as runtime components.
 
 ## Autonomous work and server storage
 
@@ -48,6 +48,10 @@ Use existing task authorization and let agents resolve routine details; ask only
 Vulcan NFS is shared across nodes; NVMe is node-local. Keep durable project source, knowledge notes and final results on shared storage. Use a verified suitable local NVMe path for staging, scratch work and caches, then preserve required outputs before allocation/node loss. Check mount permissions, available space and actual allocations. Existing CBM/runtime locations are not relocated by this library.
 
 See [current design and upstream differences](review/current-design.md) for the permission, automation and formatting changes and the exact scope retained or removed.
+
+## Prepare another laptop
+
+Follow [docs/team-laptop-setup.md](docs/team-laptop-setup.md) for the correct branch, seventeen skills, five specialist agents, three [guidance files](guidance/README.md), adapted global/project instructions, helper dependencies, [optional CBM integration](integrations/codebase-memory/README.md), plugin installation and target-machine verification. The knowledge-map skill includes its full OKF and project-setup references. [Plugin inventory](docs/plugin-inventory.json) records public bundled/runtime IDs explicitly enabled in the source config; it does not bundle their runtimes or transfer account access.
 
 ## Project instructions and deployment alignment
 

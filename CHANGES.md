@@ -73,3 +73,9 @@ Added eight source-attributed Codex skills, with pinned upstream baselines and p
 
 - At the owner’s explicit request, add exact global, workspace and project AGENTS snapshots from the Mac and both Vulkan profiles; preserve distinct local versions and one verified copy of shared project instructions. Record source metadata without editing snapshot contents.
 - Keep the portable example and explain adaptation, source-context links, independent deployment, visibility review and excluded credential/runtime material. This replaces the earlier blanket exclusion of global AGENTS snapshots for this specifically authorized capture.
+
+## Team laptop setup and missing guidance — 2026-10-23
+
+- Add exact copies of the active Karpathy-inspired coding, research-engineering and scale/concurrency guidance; distinguish them from discoverable skills. The seventeen existing skills already include the complete research-knowledge-map/OKF references.
+- Preserve the optional local CBM skill and three read-only graph-agent configuration snapshots separately from the primary seventeen-skill/five-agent library; retain the upstream MIT notice, disclose the older skill tool-list summary and require actual native installation/path adaptation.
+- Add target-laptop preparation and verification instructions plus a reference inventory of public OpenAI bundled/runtime plugin IDs explicitly enabled in the source config. Plugin caches, binaries, credentials, private organization registrations and graph databases are not distributed.

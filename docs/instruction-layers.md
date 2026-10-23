@@ -9,10 +9,10 @@
 
 ## Source boundaries and excluded material
 
-- The active global `AGENTS.md` stays in its execution profile; explicitly authorized historical copies now live under `instructions/`. The personal guidance directory and other private companions are not included by this capture. Alignment means compatible behavior and routing, not identical files at every instruction layer.
+- The active global `AGENTS.md` stays in its execution profile; explicitly authorized historical copies now live under `instructions/`. The three selected personal guidance documents are separately captured under `guidance/`; other private companions remain outside this capture. Alignment means compatible behavior and routing, not identical files at every instruction layer.
 - The exact snapshots retain any original service, environment, port or storage references. New reusable instructions should still point to approved project sources rather than duplicate operational inventories. Review repository visibility before publishing source-specific details or future captures.
 - Authentication, conversations, live SQLite databases, CBM indexes, scratch results and installation backups are not library source.
-- Official/system/plugin skills and separately installed `codebase-memory` skills/agents are not vendored by this package. A host may legitimately expose more than seventeen skills and five agents.
+- Official/system/plugin runtimes are not vendored by this package. Optional installed CBM procedure/agent snapshots are preserved separately under `integrations/codebase-memory/`, with installation/path-adaptation notes; the native server is not included. A host may legitimately expose more than the primary seventeen skills and five agents.
 - Project-owned SKS workflow skills are maintained in their project's canonical source, not silently pulled into this generic collection.
 
 ## How the layers cooperate
